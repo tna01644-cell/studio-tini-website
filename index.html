@@ -3,357 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Tini | Chic Home Organizing & Systems</title>
+    <title>Studio Tini | Intuitive Home Organizing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* --- STYLING: SOFT SCANDI & SAGE GREEN --- */
-        
-        /* Base Colors */
         :root {
-            --color-cream: #faf9f6; /* Off-white/Cream background */
-            --color-charcoal: #4a4a4a;
-            --color-sage: #8f9b89; /* Muted Sage Green for accents/buttons */
-            --color-dark-sage: #6c7865;
-            --color-border: #eaeaea;
+            --primary: #5D5C4F;   /* Earthy Olive */
+            --accent: #D2B48C;    /* Warm Clay */
+            --bg: #FDFCF8;        /* Linen White */
+            --text: #2D2D2D;      /* Soft Charcoal */
         }
 
-        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--color-charcoal);
-            background-color: var(--color-cream);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-weight: 300;
         }
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 0;
+
+        /* Intriguing Typography */
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
-        h1, h2, h3 {
-            font-family: 'Georgia', serif;
-            font-weight: normal;
-            color: var(--color-dark-sage);
-        }
-        h1 { font-size: 2.5em; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-        h2 { font-size: 2em; margin-bottom: 20px; text-align: center; }
+
+        h1 { font-style: italic; font-size: 3.5rem; color: var(--primary); }
+        h2 { font-size: 2.5rem; margin-bottom: 30px; border-bottom: 1px solid var(--accent); display: inline-block; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+        /* Navigation */
+        nav { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: bold; text-decoration: none; color: var(--primary); }
+        nav a { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Section */
+        #hero { padding: 120px 0; background: linear-gradient(135deg, #FDFCF8 0%, #F4F1E9 100%); text-align: center; }
+        #hero p { font-size: 1.2rem; max-width: 600px; margin: 20px auto 40px; }
         
-        /* HEADER */
-        header {
-            background-color: #ffffff;
-            padding: 40px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--color-border);
+        .btn { 
+            background-color: var(--primary); color: white; padding: 18px 40px; 
+            text-decoration: none; display: inline-block; transition: 0.3s; 
+            text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
         }
-        nav { margin-top: 20px; }
-        nav a {
-            text-decoration: none;
-            color: #888;
-            margin: 0 15px;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--color-sage); }
+        .btn:hover { background-color: var(--accent); transform: translateY(-3px); }
 
-        /* HERO SECTION & BUTTON */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background-color: #ffffff;
-        }
-        .hero p.tagline {
-            font-size: 1.3em;
-            font-style: italic;
-            color: #7d7d7d;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-        .btn {
-            display: inline-block;
-            background-color: var(--color-sage); /* Sage Green Button */
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background-color 0.3s;
-            font-size: 1.1em;
-        }
-        .btn:hover { background-color: var(--color-dark-sage); }
+        /* Meet Tini Section */
+        #about { padding: 100px 0; }
+        .about-content { display: flex; gap: 60px; align-items: center; }
+        .about-img-container { flex: 1; }
+        .about-img-container img { width: 100%; border-radius: 2px; filter: contrast(1.05); }
+        .about-text { flex: 1.2; }
+        .about-text p { margin-bottom: 20px; font-size: 1.1rem; }
 
-        /* SECTIONS */
-        section { padding: 60px 0; border-bottom: 1px solid var(--color-border); }
-        
-        /* --- NEW ABOUT SECTION STYLES --- */
-        .about-content {
-            display: flex;
-            align-items: flex-start; /* Align to top */
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-        .about-img-container {
-            flex-shrink: 0; /* Prevents image from shrinking */
-            width: 250px;
-        }
-        .about-img-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px; /* Soft edges */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .about-text {
-            flex-grow: 1;
-        }
-        
-        /* Responsive design for small screens */
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .about-img-container {
-                width: 70%; /* Image takes more width on mobile */
-                margin-bottom: 20px;
-            }
-            .about-text {
-                text-align: center;
-            }
-        }
-        /* --- END NEW ABOUT SECTION STYLES --- */
-        
-        /* SERVICES GRID */
-        .services-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-        .services-list li {
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            border-left: 3px solid var(--color-sage);
-        }
+        /* Gallery */
+        #gallery { padding: 100px 0; background: #fff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .gallery-item { aspect-ratio: 4/5; overflow: hidden; background: #eee; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item img:hover { transform: scale(1.05); }
 
-        /* PRICING */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .price-card {
-            background: #fff;
-            padding: 40px;
-            text-align: center;
-            border: 1px solid #eee;
-        }
-        .price { font-size: 2em; color: var(--color-sage); margin: 10px 0; font-family: 'Georgia', serif; }
+        /* Services & Pricing */
+        #services, #pricing { padding: 100px 0; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .card { padding: 40px; border: 1px solid #eee; transition: 0.3s; }
+        .card:hover { border-color: var(--accent); }
+        .price { font-size: 2rem; color: var(--primary); margin: 20px 0; font-family: 'Playfair Display'; }
 
-        /* GALLERY */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 3px;
-        }
+        /* Testimonials */
+        #testimonials { padding: 100px 0; background-color: var(--primary); color: #fff; text-align: center; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; text-align: left; }
+        .cite { font-style: italic; color: var(--accent); margin-top: 10px; display: block; }
 
-        /* TESTIMONIALS */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 20px;
-        }
-        .testimonial {
-            background: #fff;
-            padding: 30px;
-            text-align: center;
-            font-style: italic;
-            border: 1px solid var(--color-border);
-        }
-        .testimonial strong {
-            display: block;
-            margin-top: 15px;
-            font-style: normal;
-            font-size: 0.9em;
-            color: #999;
-        }
+        footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; font-size: 0.9rem; }
 
-        /* CONTACT */
-        #contact {
-            background-color: var(--color-dark-sage);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        #contact h2 { color: white; margin-bottom: 25px; }
-        .contact-info a { color: #f0f0f0; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-        .contact-info a:hover { color: var(--color-cream); }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.8em;
-            color: #aaa;
-        }
+        @media (max-width: 768px) { .about-content, .grid, .testimonial-grid, .gallery-grid { grid-template-columns: 1fr; flex-direction: column; } }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Studio Tini</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+<nav class="container">
+    <a href="#" class="logo">Studio Tini</a>
+    <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <section class="hero">
-        <div class="container">
-            <p class="tagline">"Creating elevated, breathable spaces through minimal styling and functional systems."</p>
-            <a href="#contact" class="btn">Book a Free 15-Minute Clarity Call</a>
-        </div>
-    </section>
+<section id="hero">
+    <div class="container">
+        <h1>Breathe in your space.</h1>
+        <p>"Creating elevated, breathable spaces through minimal styling and functional systems."</p>
+        <a href="https://calendly.com/studiotinidesigns" class="btn">Book a Clarity Call</a>
+    </div>
+</section>
 
-    <section id="about">
-        <div class="container">
-    <h2>Meet Tini</h2>
-    <div class="about-content">
-        <div class="about-img-container">
-            <img src="images/tini-portrait.jpeg" alt="Portrait of Christina Tini Ni, Professional Organizer">
-        </div> <div class="about-text">
-            <p>
-                I'm <strong>Christina "Tini" Ni</strong> — a calm, intuitive home organizer. My approach blends minimal styling, functional systems, and emotional clarity. I help clients transform their homes into aligned, intuitive environments that feel chic, intentional, and easy to maintain.
-            </p>
-                        My organizing journey started with my immigrant background, learning resourcefulness in my grandmother's kitchen. It crystallized after an eye-opening trip to Australia, living out of a backpack, which taught me the power of conscious simplicity. I believe true organizing is a form of healing that gives you back your time and your breath.
-                    </p>
-                </div>
+<section id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-img-container">
+                <img src="images/tini-portrait.jpeg" alt="Tini Ni Organizer">
+            </div>
+            <div class="about-text">
+                <h2>Meet Tini</h2>
+                <p>I'm <strong>Christina "Tini" Ni</strong> — a calm, intuitive home organizer. My approach blends minimal styling, functional systems, and emotional clarity.</p>
+                <p>I help clients transform their homes into aligned, intuitive environments that feel chic, intentional, and easy to maintain.</p>
+                <p>My journey started in Australia, living out of a backpack, which taught me the power of conscious simplicity. I believe true organizing is a form of healing.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="services">
-        <div class="container">
-            <h2>Signature Services</h2>
-            <ul class="services-list">
-                <li>Home organizing + decluttering</li>
-                <li>Chic room + closet resets</li>
-                <li>Airbnb styling + functional setups</li>
-                <li>Space flow + systems design</li>
-            </ul>
+<section id="services">
+    <div class="container">
+        <h2>Signature Services</h2>
+        <div class="grid">
+            <div class="card"><h3>Organizing</h3><p>Full decluttering and functional systems.</p></div>
+            <div class="card"><h3>Chic Resets</h3><p>Closet and room resets with premium styling.</p></div>
+            <div class="card"><h3>Airbnb Styling</h3><p>Functional setups for luxury short-term rentals.</p></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="pricing">
-        <div class="container">
-            <h2>Pricing Tiers</h2>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h3>Hourly Organizing</h3>
-                    <div class="price">$75/hr</div>
-                    <p>Light resets, systems, decluttering.</p>
-                </div>
-                <div class="price-card">
-                    <h3>Room Reset</h3>
-                    <div class="price">$275</div>
-                    <p>4 hours. Full transformation + layout + styling.</p>
-                </div>
-                <div class="price-card">
-                    <h3>Full-Day Transformation</h3>
-                    <div class="price">$600</div>
-                    <p>Multi-space overhaul with premium styling.</p>
-                </div>
+<section id="gallery">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/organized-closet.jpg" alt="Organized Closet"></div>
+            <div class="gallery-item"><img src="images/organized-kitchen.jpg" alt="Organized Kitchen"></div>
+            <div class="gallery-item"><img src="images/organized-office.jpg" alt="Organized Office"></div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+        <h2>Pricing</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Hourly</h3>
+                <div class="price">$75/hr</div>
+                <p>Decluttering & light systems.</p>
+            </div>
+            <div class="card">
+                <h3>Room Reset</h3>
+                <div class="price">$275</div>
+                <p>4 hours. Transformation + styling.</p>
+            </div>
+            <div class="card">
+                <h3>The Overhaul</h3>
+                <div class="price">$600</div>
+                <p>Full-day premium transformation.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-            <p style="text-align: center; color: #888; margin-bottom: 20px;">
-                (Upload your photos to the 'images' folder on GitHub)
-            </p>
-            <div class="gallery-grid">
-                <img src="images/after-photo-1.jpg" alt="Organized Space 1">
-                <img src="images/after-photo-2.jpg" alt="Organized Space 2">
-                <img src="images/after-photo-3.jpg" alt="Organized Space 3">
-            </div>
+<section id="testimonials">
+    <div class="container">
+        <h2>Client Love</h2>
+        <div class="testimonial-grid">
+            <div><p>"Her eye for flow and calm is unmatched."</p><span class="cite">Tamara - Denver</span></div>
+            <div><p>"I've never felt so supported in a space this small."</p><span class="cite">Keara - Boulder</span></div>
+            <div><p>"She gave me my home—and my breath—back."</p><span class="cite">Deanna - Santa Cruz</span></div>
+            <div><p>"She brought intention into my apartment."</p><span class="cite">Risa - Nashville</span></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2>Client Love</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    "I didn't realize how emotionally heavy my garage felt until Tini worked her magic... Her eye for flow and calm is unmatched."
-                    <strong>Tamara - Denver</strong>
-                </div>
-                <div class="testimonial">
-                    "Tini transformed my van into a functional, beautiful mini-home... I've never felt so supported in a space this small."
-                    <strong>Keara - Boulder</strong>
-                </div>
-                <div class="testimonial">
-                    "It truly felt like she gave me my home and my breath - back."
-                    <strong>Deanna - Santa Cruz</strong>
-                </div>
-                <div class="testimonial">
-                    "Tini understood exactly how I needed my space to feel before I could even articulate it. She brought intention, beauty, and calm into my apartment."
-                    <strong>Risa - Nashville</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Find Your Calm</h2>
-            <div class="contact-info">
-                <p style="font-size: 1.2em; font-weight: 300; margin-bottom: 30px;">Ready to find your calm? Book a free clarity call or reach out directly.</p>
-                
-                <p style="font-size: 1.4em; margin-bottom: 10px;">
-                    <strong>Email:</strong> <a href="mailto:studiotinidesigns@gmail.com">studiotinidesigns@gmail.com</a>
-                </p>
-                
-                <p style="font-size: 1.4em;">
-                    <strong>Phone:</strong> <a href="tel:2018870164">201-887-0164</a>
-                </p>
-                
-                <p style="margin-top: 30px;">
-                    Instagram: <a href="https://www.instagram.com/tinitakestidying/" target="_blank">@tinitakestidying</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            &copy; 2025 Studio Tini. All Rights Reserved.
-        </div>
-    </footer>
+<footer id="contact">
+    <div class="container">
+        <h2>Find Your Calm</h2>
+        <p>studiotinidesigns@gmail.com | @tinitakestidying</p>
+        <p>&copy; 2025 Studio Tini. All Rights Reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
