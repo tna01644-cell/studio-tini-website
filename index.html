@@ -69,14 +69,17 @@
             100% { transform: translateX(-50%); }
         }
 
-        #gallery { padding: 100px 0; background: #fff; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        #gallery { padding: 100px 0; background: #fff; border-top: 1px solid var(--border); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px;}
         .gallery-item { aspect-ratio: 1; background: var(--bg); overflow: hidden; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .gallery-item img:hover { transform: scale(1.05); }
 
-        footer { padding: 80px 0; border-top: 1px solid var(--border); background: var(--bg); }
-        .contact-link { font-size: clamp(1.5rem, 5vw, 2.5rem); color: var(--text); text-decoration: none; font-family: 'Syncopate'; }
+        /* Unified Footer Typography */
+        footer { padding: 100px 0; border-top: 1px solid var(--border); background: var(--bg); }
+        footer h2 { border-bottom: 0; border-left: 10px solid var(--accent); padding-left: 20px; font-size: 1.6rem; }
+        .contact-link { font-size: 1.6rem; color: var(--text); text-decoration: none; font-family: 'Syncopate'; display: block; margin-top: 10px; transition: 0.3s; }
+        .contact-link:hover { color: var(--primary); }
 
         @media (max-width: 768px) { .about-content, .gallery-grid { grid-template-columns: 1fr; } }
     </style>
@@ -114,54 +117,11 @@
 <section id="testimonials">
     <div class="marquee">
         <div class="testimonial-card">
-            <p>"I’ve brought Studio Tini into my life three separate times, navigating the intense transitions from my first apartment to my family home and eventually a massive garage overhaul. Christina doesn't just 'tidy'; she systematically removes the decision fatigue and emotional overhead that had me paralyzed for months. Every time she visits, she lifts a mental weight off my shoulders that I couldn't quantify until it was gone. She literally gives me back my time, my mental space, and my breath."</p>
+            <p>"I’ve brought Studio Tini into my life three separate times, navigating the intense transitions from my first apartment to my family home and eventually a massive garage overhaul. Christina doesn't just 'tidy'; she systematically removes the decision fatigue and emotional overhead that had me paralyzed for months. Every time she visits, she lifts a mental weight off my shoulders that I couldn't quantify until it was gone. She has a rare gift for architectural logic paired with human empathy. She literally gives me back my time, my mental space, and my breath."</p>
             <span class="cite">T.N. // DENVER</span>
         </div>
         <div class="testimonial-card">
             <p>"Moving from a home to a van was terrifying, but Tini saw my creative vision and built secure, logical systems that survive life on the move. We facilitated my past into the community via marketplace instead of the landfill—seeing my items make a real difference for neighbors was the closure I needed. She made the transition intentional, non-judgmental, and surprisingly fun. I feel lighter every time I drive to a new location knowing every single item is thoughtfully placed."</p>
             <span class="cite">K.M. // BOULDER</span>
         </div>
-        <div class="testimonial-card">
-            <p>"Tini understands asset management but with a human soul. She brought an industrial, breathable flow to my apartment that cleared my cognitive load. I now wake up in an environment that fuels my productivity rather than draining it. It’s an investment in my wellbeing; she took a space that felt like a source of distress and turned it into an aligned, high-utility, warm sanctuary. My home finally matches the speed and ambition of my professional life."</p>
-            <span class="cite">R.A. // NASHVILLE</span>
-        </div>
-
-        <div class="testimonial-card">
-            <p>"I’ve brought Studio Tini into my life three separate times, navigating the intense transitions from my first apartment to my family home and eventually a massive garage overhaul. Christina doesn't just 'tidy'; she systematically removes the decision fatigue and emotional overhead that had me paralyzed for months. Every time she visits, she lifts a mental weight off my shoulders that I couldn't quantify until it was gone. She literally gives me back my time, my mental space, and my breath."</p>
-            <span class="cite">T.N. // DENVER</span>
-        </div>
-        <div class="testimonial-card">
-            <p>"Moving from a home to a van was terrifying, but Tini saw my creative vision and built secure, logical systems that survive life on the move. We facilitated my past into the community via marketplace instead of the landfill—seeing my items make a real difference for neighbors was the closure I needed. She made the transition intentional, non-judgmental, and surprisingly fun. I feel lighter every time I drive to a new location knowing every single item is thoughtfully placed."</p>
-            <span class="cite">K.M. // BOULDER</span>
-        </div>
-        <div class="testimonial-card">
-            <p>"Tini understands asset management but with a human soul. She brought an industrial, breathable flow to my apartment that cleared my cognitive load. I now wake up in an environment that fuels my productivity rather than draining it. It’s an investment in my wellbeing; she took a space that felt like a source of distress and turned it into an aligned, high-utility, warm sanctuary. My home finally matches the speed and ambition of my professional life."</p>
-            <span class="cite">R.A. // NASHVILLE</span>
-        </div>
-    </div>
-</section>
-
-<section id="gallery" class="container">
-    <h2>STUDIO ARCHIVE</h2>
-    <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/archive-1.jpg" alt="Organized Space 1"></div>
-        <div class="gallery-item"><img src="images/archive-2.jpg" alt="Organized Space 2"></div>
-        <div class="gallery-item"><img src="images/archive-3.jpg" alt="Organized Space 3"></div>
-        <div class="gallery-item"><img src="images/archive-4.jpg" alt="Organized Space 4"></div>
-        <div class="gallery-item"><img src="images/archive-5.jpg" alt="Organized Space 5"></div>
-        <div class="gallery-item"><img src="images/archive-6.jpg" alt="Organized Space 6"></div>
-        <div class="gallery-item"><img src="images/archive-7.jpg" alt="Organized Space 7"></div>
-        <div class="gallery-item"><img src="images/archive-8.jpg" alt="Organized Space 8"></div>
-        <div class="gallery-item"><img src="images/archive-9.jpg" alt="Organized Space 9"></div>
-        <div class="gallery-item"><img src="images/archive-10.jpg" alt="Organized Space 10"></div>
-    </div>
-</section>
-
-<footer id="contact" class="container">
-    <h2>READY?</h2>
-    <a href="mailto:studiotinidesigns@gmail.com" class="contact-link">WORK WITH TINI</a>
-    <p style="margin-top: 40px; font-size: 0.7rem; letter-spacing: 2px;">@TINITAKESTIDYING // STUDIO ARCHIVE<br>STUDIO TINI © 2025</p>
-</footer>
-
-</body>
-</html>
+        <div class="testimonial-card
