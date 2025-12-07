@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #5B544D;   /* Warm Oak/Mushroom */
-            --accent: #D7C4B1;    /* Pale Birch/Clay */
-            --bg: #F9F7F4;        /* Scandinavian Linen */
-            --text: #2B2927;      /* Soft Bark */
+            --primary: #5B544D;   /* Warm Oak */
+            --accent: #D7C4B1;    /* Pale Birch */
+            --bg: #F9F7F4;        /* Linen */
+            --text: #2B2927;      /* Bark */
             --border: #E5E1DA;
         }
 
@@ -32,7 +32,7 @@
         }
 
         h1 { font-size: clamp(2.5rem, 10vw, 5rem); color: var(--text); line-height: 1; margin-bottom: 20px;}
-        h2 { font-size: 1.6rem; margin-bottom: 30px; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px; }
+        h2 { font-size: 1.6rem; margin-bottom: 30px; display: inline-block; padding-bottom: 10px; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
@@ -61,7 +61,6 @@
         .marquee { display: flex; width: fit-content; animation: scroll 80s linear infinite; }
         .marquee:hover { animation-play-state: paused; }
         .testimonial-card { width: 600px; padding: 50px; margin-right: 40px; border: 1px solid var(--border); background: #fff; }
-        .testimonial-card p { font-size: 1rem; font-weight: 300; }
         .cite { display: block; margin-top: 30px; font-family: 'Syncopate', sans-serif; font-size: 0.6rem; color: var(--primary); }
 
         @keyframes scroll {
@@ -69,17 +68,15 @@
             100% { transform: translateX(-50%); }
         }
 
+        /* Forced Grid Heights */
         #gallery { padding: 100px 0; background: #fff; border-top: 1px solid var(--border); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px;}
-        .gallery-item { aspect-ratio: 1; background: var(--bg); overflow: hidden; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .gallery-item img:hover { transform: scale(1.05); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px; }
+        .gallery-item { width: 100%; aspect-ratio: 1; background: var(--accent); overflow: hidden; } /* accent shows blank birch color */
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Unified Footer Typography */
         footer { padding: 100px 0; border-top: 1px solid var(--border); background: var(--bg); }
-        footer h2 { border-bottom: 0; border-left: 10px solid var(--accent); padding-left: 20px; font-size: 1.6rem; }
-        .contact-link { font-size: 1.6rem; color: var(--text); text-decoration: none; font-family: 'Syncopate'; display: block; margin-top: 10px; transition: 0.3s; }
-        .contact-link:hover { color: var(--primary); }
+        footer h2 { border-left: 10px solid var(--accent); padding-left: 20px; font-size: 1.6rem; }
+        .contact-link { font-size: 1.6rem; color: var(--text); text-decoration: none; font-family: 'Syncopate'; display: block; margin-top: 10px; }
 
         @media (max-width: 768px) { .about-content, .gallery-grid { grid-template-columns: 1fr; } }
     </style>
@@ -93,22 +90,21 @@
 
 <section id="hero" class="container">
     <h1>BREATHE<br>IN YOUR<br>SPACE.</h1>
-    <p>Minimal styling meet functional Scandinavian logic. I create non-judgmental environments designed for adventure, creativity, and daily ease.</p>
-    <a href="https://calendly.com/studiotinidesigns" class="btn">BOOK A CLARITY CALL</a>
+    <p>Minimal styling meets functional Scandinavian logic. Non-judgmental environments designed for adventure, creativity, and daily ease.</p>
+    <a href="https://calendly.com/studiotinidesigns" class="btn">BOOK A CALL</a>
 </section>
 
 <section id="about" class="container">
     <div class="about-content">
         <div class="about-img-container">
-            <img src="images/tini-portrait.jpeg" alt="Tini Ni">
+            <img src="images/tini-portrait.jpeg" alt="Tini Ni Portrait">
         </div>
         <div class="about-text">
             <h2>THE PROCESS</h2>
-            <p>I am <strong>Tini Ni</strong>. I approach organization as a joyful reset rather than a clinical chore. My mission is to make the process <strong>fun, intentional, and entirely non-judgmental</strong>.</p>
-            <p>Moving across the world with only a backpack taught me that items are just energy. I facilitate the transition of your pre-loved items into the community via local circular economies, clearing your cognitive load.</p>
+            <p>I approach organization as a joyful reset. I facilitate the circular economy transition—moving distress inventory into local hands.</p>
             <div class="process-box">
                 <h3 style="margin-bottom: 10px;">VIBE CHECK</h3>
-                <p>We don't just "trash" things. We find the flow. I combine architectural logic with a warm, intuitive energy so you actually enjoy waking up in your home.</p>
+                <p>Architectural logic meets warm energy. Wake up in a home that feels chic and easy to maintain.</p>
             </div>
         </div>
     </div>
@@ -117,11 +113,45 @@
 <section id="testimonials">
     <div class="marquee">
         <div class="testimonial-card">
-            <p>"I’ve brought Studio Tini into my life three separate times, navigating the intense transitions from my first apartment to my family home and eventually a massive garage overhaul. Christina doesn't just 'tidy'; she systematically removes the decision fatigue and emotional overhead that had me paralyzed for months. Every time she visits, she lifts a mental weight off my shoulders that I couldn't quantify until it was gone. She has a rare gift for architectural logic paired with human empathy. She literally gives me back my time, my mental space, and my breath."</p>
+            <p>"Hired Tini 3 times... removed decision fatigue. pro-relief."</p>
             <span class="cite">T.N. // DENVER</span>
         </div>
         <div class="testimonial-card">
-            <p>"Moving from a home to a van was terrifying, but Tini saw my creative vision and built secure, logical systems that survive life on the move. We facilitated my past into the community via marketplace instead of the landfill—seeing my items make a real difference for neighbors was the closure I needed. She made the transition intentional, non-judgmental, and surprisingly fun. I feel lighter every time I drive to a new location knowing every single item is thoughtfully placed."</p>
+            <p>"Transitioning to van life was daunting, Tini made it logical and fun. Secure systems on the move."</p>
             <span class="cite">K.M. // BOULDER</span>
         </div>
-        <div class="testimonial-card
+        <div class="testimonial-card">
+            <p>"Hired Tini 3 times... removed decision fatigue. pro-relief."</p>
+            <span class="cite">T.N. // DENVER</span>
+        </div>
+        <div class="testimonial-card">
+            <p>"Transitioning to van life was daunting, Tini made it logical and fun. Secure systems on the move."</p>
+            <span class="cite">K.M. // BOULDER</span>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="container">
+    <h2 style="border-left: 10px solid var(--accent); padding-left: 20px;">THE ARCHIVE</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/archive-1.jpg" alt="Organized Space 1"></div>
+        <div class="gallery-item"><img src="images/archive-2.jpg" alt="Organized Space 2"></div>
+        <div class="gallery-item"><img src="images/archive-3.jpg" alt="Organized Space 3"></div>
+        <div class="gallery-item"><img src="images/archive-4.jpg" alt="Organized Space 4"></div>
+        <div class="gallery-item"><img src="images/archive-5.jpg" alt="Organized Space 5"></div>
+        <div class="gallery-item"><img src="images/archive-6.jpg" alt="Organized Space 6"></div>
+        <div class="gallery-item"><img src="images/archive-7.jpg" alt="Organized Space 7"></div>
+        <div class="gallery-item"><img src="images/archive-8.jpg" alt="Organized Space 8"></div>
+        <div class="gallery-item"><img src="images/archive-9.jpg" alt="Organized Space 9"></div>
+        <div class="gallery-item"><img src="images/archive-10.jpg" alt="Organized Space 10"></div>
+    </div>
+</section>
+
+<footer id="contact" class="container">
+    <h2>READY?</h2>
+    <a href="mailto:studiotinidesigns@gmail.com" class="contact-link">WORK WITH TINI</a>
+    <p style="margin-top: 40px; font-size: 0.7rem;">@TINITAKESTIDYING // LOGIC + FLOW // © 2025</p>
+</footer>
+
+</body>
+</html>
