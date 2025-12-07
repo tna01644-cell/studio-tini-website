@@ -88,6 +88,45 @@
         /* SECTIONS */
         section { padding: 60px 0; border-bottom: 1px solid var(--color-border); }
         
+        /* --- NEW ABOUT SECTION STYLES --- */
+        .about-content {
+            display: flex;
+            align-items: flex-start; /* Align to top */
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .about-img-container {
+            flex-shrink: 0; /* Prevents image from shrinking */
+            width: 250px;
+        }
+        .about-img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px; /* Soft edges */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .about-text {
+            flex-grow: 1;
+        }
+        
+        /* Responsive design for small screens */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-img-container {
+                width: 70%; /* Image takes more width on mobile */
+                margin-bottom: 20px;
+            }
+            .about-text {
+                text-align: center;
+            }
+        }
+        /* --- END NEW ABOUT SECTION STYLES --- */
+        
         /* SERVICES GRID */
         .services-list {
             list-style: none;
@@ -196,10 +235,20 @@
 
     <section id="about">
         <div class="container">
-            <h2>About Tini</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-                I'm <strong>Christina "Tini" Ni</strong> — a calm, intuitive home organizer. My approach blends minimal styling, functional systems, and emotional clarity. I help clients transform their homes into aligned, intuitive environments that feel chic, intentional, and easy to maintain.
-            </p>
+            <h2>Meet Tini</h2>
+            <div class="about-content">
+                <div class="about-img-container">
+                    <img src="images/tini-portrait.jpg" alt="Portrait of Tini Ni, Professional Organizer">
+                </div>
+                <div class="about-text">
+                    <p>
+                        I'm <strong>Christina "Tini" Ni</strong> — a calm, intuitive home organizer. My approach blends minimal styling, functional systems, and emotional clarity. I help clients transform their homes into aligned, intuitive environments that feel chic, intentional, and easy to maintain.
+                    </p>
+                    <p>
+                        My organizing journey started with my immigrant background, learning resourcefulness in my grandmother's kitchen. It crystallized after an eye-opening trip to Australia, living out of a backpack, which taught me the power of conscious simplicity. I believe true organizing is a form of healing that gives you back your time and your breath.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -242,7 +291,7 @@
         <div class="container">
             <h2>Gallery</h2>
             <p style="text-align: center; color: #888; margin-bottom: 20px;">
-                (Ensure you have an <strong>'images'</strong> folder inside your 'studiotini' folder with these exact filenames)
+                (Upload your photos to the 'images' folder on GitHub)
             </p>
             <div class="gallery-grid">
                 <img src="images/after-photo-1.jpg" alt="Organized Space 1">
