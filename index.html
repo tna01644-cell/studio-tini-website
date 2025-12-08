@@ -20,4 +20,105 @@
         nav a { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 0.75rem; text-transform: uppercase; font-weight: 500; }
         #hero { padding: 80px 0; border-bottom: 1px solid var(--border); }
         #hero p { font-size: 1.1rem; max-width: 750px; margin: 20px 0 40px; font-weight: 300; }
-        .btn { background-color: var(--text); color: white; padding: 18px 35px
+        .btn { background-color: var(--text); color: white; padding: 18px 35px; text-decoration: none; display: inline-block; transition: 0.3s ease; text-transform: uppercase; font-weight: 700; font-size: 0.7rem; border: 1px solid var(--text); }
+        .btn:hover { background: transparent; color: var(--text); transform: scale(1.02); }
+        .section-padding { padding: 100px 0; border-bottom: 1px solid var(--border); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 50px; }
+        .price-card { background: #fff; border: 1px solid var(--border); padding: 40px; display: flex; flex-direction: column; }
+        .price-card h3 { font-size: 0.8rem; color: var(--primary); margin-bottom: 10px; }
+        .price-tag { font-size: 1.8rem; margin-bottom: 20px; font-weight: 700; }
+        .price-card ul { list-style: none; margin-bottom: 30px; flex-grow: 1; font-size: 0.85rem; }
+        .price-card li { margin-bottom: 12px; padding-left: 15px; position: relative; font-weight: 300; }
+        .price-card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+        .addon-box { margin-top: 40px; padding: 30px; border: 1px solid var(--border); background: #fff; }
+        .process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+        .process-item { padding: 30px; border: 1px solid var(--border); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px; }
+        .gallery-item { aspect-ratio: 1; background: var(--accent); overflow: hidden; position: relative; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .label { position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 5px 10px; font-size: 0.6rem; font-family: 'Syncopate'; text-transform: uppercase; }
+        @media (max-width: 900px) { .pricing-grid, .process-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav class="container">
+    <a href="#" class="logo">STUDIO TINI</a>
+    <div><a href="#about">STORY</a><a href="#services">PRICING</a><a href="#process">PROCESS</a><a href="#gallery">ARCHIVE</a></div>
+</nav>
+
+<section id="hero" class="container">
+    <h1>DESIGN A LIFE<br>AROUND LESS.</h1>
+    <p>Minimal stuff isn’t less life — it’s more clarity, more time, more freedom. I help owners and Airbnb hosts create homes that breathe and systems that sustain.</p>
+    <a href="https://calendly.com/studiotinidesigns" class="btn">BOOK A CONSULTATION</a>
+</section>
+
+<section id="about" class="container section-padding">
+    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start;">
+        <img src="images/tini-portrait.jpeg" style="width: 100%;" alt="Christina Ni">
+        <div>
+            <h2>STUDIO STORY</h2>
+            <p style="margin-bottom: 20px;"><strong>Studio Tini is where design meets life.</strong> proving that minimal stuff isn’t less life, it’s more clarity, more time, more freedom.</p>
+            <p style="margin-bottom: 20px;">Traveling to 19 countries proved that living light is not just possible—it’s empowering. My heritage taught me resourcefulness: making the most of what we already have.</p>
+            <p><strong>I work with:</strong> Busy professionals, Airbnb hosts, and homeowners ready for total spatial clarity.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="container section-padding">
+    <h2>SERVICES & PRICING</h2>
+    <div class="pricing-grid">
+        <div class="price-card">
+            <h3>01 // STARTER</h3>
+            <div class="price-tag">$249</div>
+            <ul><li>3-Hour Reset (1 Space)</li><li>Declutter + Organize</li><li>Haul-away included</li></ul>
+            <a href="https://calendly.com/studiotinidesigns" class="btn" style="padding: 12px; text-align: center; font-size: 0.6rem;">BOOK STARTER</a>
+        </div>
+        <div class="price-card">
+            <h3>02 // REFRESH</h3>
+            <div class="price-tag">$549</div>
+            <ul><li>6 Hours / 2-3 Spaces</li><li>Custom labeling systems</li><li>Reclaim your daily flow</li></ul>
+            <a href="mailto:studiotinidesigns@gmail.com" class="btn" style="padding: 12px; text-align: center; font-size: 0.6rem;">BOOK REFRESH</a>
+        </div>
+        <div class="price-card">
+            <h3>03 // TRANSFORM</h3>
+            <div class="price-tag">$600</div>
+            <ul><li>12 Hour Transformation</li><li>Up to 5 spaces overhaul</li><li>Premium staging included</li></ul>
+            <a href="mailto:studiotinidesigns@gmail.com" class="btn" style="padding: 12px; text-align: center; font-size: 0.6rem;">BOOK TOTAL RESET</a>
+        </div>
+    </div>
+    <div class="addon-box">
+        <h4>CAR DECLUTTERING — $65</h4>
+        <p style="font-size: 0.85rem; font-weight: 300;">Functional logic for daily SUV use. Quick reset to reduce stress. <strong>$65 add-on.</strong></p>
+    </div>
+</section>
+
+<section id="process" class="container section-padding">
+    <h2>THE PROCESS</h2>
+    <div class="process-grid">
+        <div class="process-item"><h4>01 // CONSULT</h4><p style="font-size: 0.85rem;">15-min vision dive.</p></div>
+        <div class="process-item"><h4>02 // PLAN</h4><p style="font-size: 0.85rem;">Sustainable strategy design.</p></div>
+        <div class="process-item"><h4>03 // SESSION</h4><p style="font-size: 0.85rem;">Hands-on transformation.</p></div>
+        <div class="process-item"><h4>04 // SUSTAIN</h4><p style="font-size: 0.85rem;">Habit integration flow.</p></div>
+    </div>
+</section>
+
+<section id="gallery" class="container section-padding">
+    <h2>THE ARCHIVE</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/archive-1.jpg"><div class="label">Kitchen Denver</div></div>
+        <div class="gallery-item"><img src="images/archive-2.jpg"><div class="label">Garage Overhaul</div></div>
+        <div class="gallery-item"><img src="images/archive-3.jpg"><div class="label">Boulder Logic</div></div>
+        <div class="gallery-item"><img src="images/archive-4.jpg"><div class="label">Nashville Family</div></div>
+        <div class="gallery-item"><img src="images/archive-5.jpg"><div class="label">Airbnb Staging</div></div>
+        <div class="gallery-item"><img src="images/archive-6.jpg"><div class="label">Minimalist Flow</div></div>
+    </div>
+</section>
+
+<footer id="contact" class="container" style="padding: 100px 0;">
+    <a href="mailto:studiotinidesigns@gmail.com?subject=New Project Inquiry" style="font-size: 1.6rem; color: var(--text); text-decoration: none; font-family: 'Syncopate';">WORK WITH TINI</a>
+    <p style="margin-top: 40px; font-size: 0.7rem; font-weight: 700;">@TINITAKESTIDYING // STUDIO TINI © 2025</p>
+</footer>
+
+</body>
+</html>
