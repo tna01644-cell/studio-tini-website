@@ -9,8 +9,8 @@
         :root {
             --primary: #5B544D;   /* Warm Oak */
             --accent: #D7C4B1;    /* Pale Birch */
-            --bg: #F9F7F4;        /* Linen */
-            --text: #2B2927;      /* Bark */
+            --bg: #F9F7F4;        /* Scandinavian Linen */
+            --text: #2B2927;      /* Soft Bark */
             --border: #E5E1DA;
         }
 
@@ -32,7 +32,7 @@
         }
 
         h1 { font-size: clamp(2.5rem, 10vw, 5rem); color: var(--text); line-height: 1; margin-bottom: 20px;}
-        h2 { font-size: 1.6rem; margin-bottom: 30px; display: inline-block; padding-bottom: 10px; }
+        h2 { font-size: 1.6rem; margin-bottom: 30px; display: inline-block; padding-bottom: 10px; border-bottom: none; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
@@ -47,26 +47,29 @@
             background-color: var(--text); color: white; padding: 20px 45px; 
             text-decoration: none; display: inline-block; transition: 0.3s ease; 
             text-transform: uppercase; font-weight: 700; font-size: 0.75rem; border: 1px solid var(--text);
+            cursor: pointer;
         }
         .btn:hover { background: transparent; color: var(--text); transform: scale(1.02); }
 
         #about { padding: 100px 0; border-top: 1px solid var(--border); }
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
         .about-img-container img { width: 100%; border-radius: 0; }
-        .about-text h2 { border-bottom: 0; border-left: 10px solid var(--accent); padding-left: 20px; }
+        .about-text h2 { border-left: 10px solid var(--accent); padding-left: 20px; }
 
-        .process-box { background: var(--accent); color: var(--bg); padding: 40px; margin-top: 30px; }
+        #services { padding: 100px 0; border-top: 1px solid var(--border); }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .pricing-card { border: 1px solid var(--border); padding: 40px; background: #fff; display: flex; flex-direction: column; }
+        .pricing-card h3 { font-size: 0.8rem; margin-bottom: 10px; color: var(--primary); }
+        .price { font-size: 1.8rem; margin-bottom: 20px; font-weight: 700; }
+        .pricing-card ul { list-style: none; margin-bottom: 40px; flex-grow: 1; font-size: 0.9rem; font-weight: 300; }
+        .pricing-card li { margin-bottom: 10px; position: relative; padding-left: 20px; }
+        .pricing-card li::before { content: "//"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 
-        #testimonials { padding: 100px 0; background: var(--bg); overflow: hidden; border-top: 1px solid var(--border); }
-        .marquee { display: flex; width: fit-content; animation: scroll 80s linear infinite; }
-        .marquee:hover { animation-play-state: paused; }
-        .testimonial-card { width: 650px; padding: 50px; margin-right: 40px; border: 1px solid var(--border); background: #fff; }
+        #reviews { padding: 100px 0; border-top: 1px solid var(--border); }
+        .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+        .testimonial-card { padding: 40px; border: 1px solid var(--border); background: #fff; }
+        .testimonial-card p { font-size: 1rem; font-weight: 300; line-height: 1.6; }
         .cite { display: block; margin-top: 30px; font-family: 'Syncopate', sans-serif; font-size: 0.6rem; color: var(--primary); }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
 
         #gallery { padding: 100px 0; background: #fff; border-top: 1px solid var(--border); }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px; }
@@ -77,6 +80,7 @@
         footer h2 { border-left: 10px solid var(--accent); padding-left: 20px; font-size: 1.6rem; }
         .contact-link { font-size: 1.6rem; color: var(--text); text-decoration: none; font-family: 'Syncopate'; display: block; margin-top: 10px; }
 
+        @media (max-width: 900px) { .review-grid, .service-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { .about-content, .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -84,13 +88,18 @@
 
 <nav class="container">
     <a href="#" class="logo">STUDIO TINI</a>
-    <div><a href="#about">ABOUT</a><a href="#gallery">ARCHIVE</a><a href="https://www.instagram.com/tinitakestidying" target="_blank">INSTAGRAM</a></div>
+    <div>
+        <a href="#services">OFFERINGS</a>
+        <a href="#about">ABOUT</a>
+        <a href="#gallery">ARCHIVE</a>
+        <a href="https://www.instagram.com/tinitakestidying" target="_blank">INSTAGRAM</a>
+    </div>
 </nav>
 
 <section id="hero" class="container">
     <h1>BREATHE<br>IN YOUR<br>SPACE.</h1>
     <p>Minimal styling meets functional Scandinavian logic. Non-judgmental environments designed for adventure, creativity, and daily ease.</p>
-    <a href="https://calendly.com/studiotinidesigns" class="btn">BOOK A CALL</a>
+    <a href="#services" class="btn">VIEW SERVICES</a>
 </section>
 
 <section id="about" class="container">
@@ -101,7 +110,7 @@
         <div class="about-text">
             <h2>THE PROCESS</h2>
             <p>I approach organization as a joyful reset. I facilitate the circular economy transition—moving distress inventory into local hands.</p>
-            <div class="process-box">
+            <div style="background: var(--accent); color: var(--bg); padding: 40px; margin-top: 30px;">
                 <h3 style="margin-bottom: 10px;">VIBE CHECK</h3>
                 <p>Architectural logic meets warm energy. Wake up in a home that feels chic and easy to maintain.</p>
             </div>
@@ -109,31 +118,55 @@
     </div>
 </section>
 
-<section id="testimonials">
-    <div class="marquee">
-        <div class="testimonial-card">
-            <p>"I’ve brought Studio Tini into my life three separate times, navigating the transitions from my first apartment to my family home and a massive garage overhaul. Christina systematicially removes the decision fatigue and emotional overhead that had me paralyzed for months. Every visit, she lifts a mental weight off my shoulders I couldn't quantify until it was gone. She literally gives me back my time and my breath."</p>
-            <span class="cite">T.N. // DENVER</span>
+<section id="services" class="container">
+    <h2 style="border-left: 10px solid var(--accent); padding-left: 20px;">OFFERINGS</h2>
+    <div class="service-grid">
+        <div class="pricing-card">
+            <h3>01 // CLARITY CALL</h3>
+            <div class="price">$75</div>
+            <ul>
+                <li>Virtual Space audit</li>
+                <li>Strategic Roadmap</li>
+                <li>Distressed Inventory Audit</li>
+            </ul>
+            <a href="https://calendly.com/studiotinidesigns" class="btn" style="padding: 15px 20px; font-size: 0.6rem; text-align: center;">BOOK CALL</a>
         </div>
-        <div class="testimonial-card">
-            <p>"Moving from a home to a van was daunting. Tini saw my vision and built secure, logical systems that thrive while the van is in motion. We facilitated my past into the community via marketplace instead of the trash—seeing my items make a real difference for neighbors was the closure I needed. She made it intentional and surprisingly fun."</p>
-            <span class="cite">K.M. // BOULDER</span>
+        <div class="pricing-card">
+            <h3>02 // SPATIAL OVERHAUL</h3>
+            <div class="price">$450+</div>
+            <ul>
+                <li>Full-Day Intensive</li>
+                <li>Architectural Logic Systems</li>
+                <li>Circular Economy facilitation</li>
+            </ul>
+            <a href="#contact" class="btn" style="padding: 15px 20px; font-size: 0.6rem; text-align: center;">INQUIRE</a>
         </div>
-        <div class="testimonial-card">
-            <p>"Tini understands asset management but with a soul. She brought an industrial, breathable flow to my space that cleared my cognitive load. I now wake up in an environment that fuels my productivity rather than draining it. She took a source of distress and turned it into an aligned, high-utility sanctuary."</p>
-            <span class="cite">R.A. // NASHVILLE</span>
+        <div class="pricing-card">
+            <h3>03 // RETENTION</h3>
+            <div class="price">RETAINER</div>
+            <ul>
+                <li>Monthly Logic maintenance</li>
+                <li>Seasonal Resets</li>
+                <li>Inventory curation</li>
+            </ul>
+            <a href="#contact" class="btn" style="padding: 15px 20px; font-size: 0.6rem; text-align: center;">JOIN LIST</a>
         </div>
+    </div>
+</section>
 
+<section id="reviews" class="container">
+    <h2 style="border-left: 10px solid var(--accent); padding-left: 20px;">SOCIAL PROOF</h2>
+    <div class="review-grid">
         <div class="testimonial-card">
-            <p>"I’ve brought Studio Tini into my life three separate times, navigating the transitions from my first apartment to my family home and a massive garage overhaul. Christina systematicially removes the decision fatigue and emotional overhead that had me paralyzed for months. Every visit, she lifts a mental weight off my shoulders I couldn't quantify until it was gone. She literally gives me back my time and my breath."</p>
+            <p>"Christina systematically removes the decision fatigue and emotional overhead that had me paralyzed for months. She literally gives me back my time and my breath."</p>
             <span class="cite">T.N. // DENVER</span>
         </div>
         <div class="testimonial-card">
-            <p>"Moving from a home to a van was daunting. Tini saw my vision and built secure, logical systems that thrive while the van is in motion. We facilitated my past into the community via marketplace instead of the trash—seeing my items make a real difference for neighbors was the closure I needed. She made it intentional and surprisingly fun."</p>
+            <p>"Tini saw my vision and built secure, logical systems that thrive while on the move. We facilitated my past back to the neighbors—closure I needed."</p>
             <span class="cite">K.M. // BOULDER</span>
         </div>
         <div class="testimonial-card">
-            <p>"Tini understands asset management but with a soul. She brought an industrial, breathable flow to my space that cleared my cognitive load. I now wake up in an environment that fuels my productivity rather than draining it. She took a source of distress and turned it into an aligned, high-utility sanctuary."</p>
+            <p>"Industrial, breathable flow that cleared my cognitive load. My home finally matches the speed and ambition of my professional life."</p>
             <span class="cite">R.A. // NASHVILLE</span>
         </div>
     </div>
@@ -159,4 +192,3 @@
 
 </body>
 </html>
-
