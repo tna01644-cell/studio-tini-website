@@ -7,29 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #5B544D;   /* Warm Oak */
-            --accent: #D7C4B1;    /* Pale Birch */
-            --bg: #F9F7F4;        /* Linen */
-            --text: #2B2927;      /* Bark */
-            --border: #E5E1DA;
+            --primary: #5B544D; --accent: #D7C4B1; --bg: #F9F7F4; --text: #2B2927; --border: #E5E1DA;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 { 
-            font-family: 'Syncopate', sans-serif; 
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: -0.05em;
-        }
-
-        h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); color: var(--text); line-height: 1.1; margin-bottom: 20px;}
-        h
+        body { font-family: 'Space Grotesk', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Syncopate', sans-serif; text-transform: uppercase; font-weight: 700; letter-spacing: -0.05em; }
+        h1 { font-size: clamp(2rem, 8vw, 4rem); color: var(--text); line-height: 1.1; margin-bottom: 20px;}
+        h2 { font-size: 1.5rem; margin-bottom: 30px; border-left: 10px solid var(--accent); padding-left: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        nav { padding: 40px 0; display: flex; justify-content: space-between; align-items: baseline; }
+        .logo { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; text-decoration: none; color: var(--text); }
+        nav a { text-decoration: none; color: var(--text); margin-left: 30px; font-size: 0.75rem; text-transform: uppercase; font-weight: 500; }
+        #hero { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        #hero p { font-size: 1.1rem; max-width: 750px; margin: 20px 0 40px; font-weight: 300; }
+        .btn { background-color: var(--text); color: white; padding: 18px 35px
