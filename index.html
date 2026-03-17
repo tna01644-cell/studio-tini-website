@@ -3,230 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Tini | Christina Ni</title>
+    <title>Studio Tini | Strategic Spatial Curation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&family=Playfair+Display:italic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; background-color: #FAF9F6; color: #1A1A1A; }
         .serif { font-family: 'Playfair Display', serif; }
+        .fade-in { animation: fadeIn 1.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-[#faf9f6] text-slate-900">
+<body class="selection:bg-amber-100">
 
-    <nav class="sticky top-0 z-50 bg-[#faf9f6]/90 backdrop-blur-sm border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-[0.3em] uppercase">Studio Tini</div>
-            <div class="flex space-x-6 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="#about" class="hover:text-amber-700 transition">About</a>
-                <a href="#services" class="hover:text-amber-700 transition">Services</a>
-                <a href="#archive" class="hover:text-amber-700 transition">Archive</a>
+    <nav class="sticky top-0 z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-[#E5E5E1]">
+        <div class="max-w-7xl mx-auto px-8 py-8 flex justify-between items-center">
+            <div class="serif italic text-2xl tracking-tighter">Studio Tini</div>
+            <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.3em] font-bold">
+                <a href="#about" class="hover:opacity-50 transition">The Story</a>
+                <a href="#work" class="hover:opacity-50 transition">The Work</a>
+                <a href="#services" class="hover:opacity-50 transition">Services</a>
+                <a href="#contact" class="hover:opacity-50 transition text-[#54584e]">Inquire</a>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-5xl md:text-8xl font-extralight tracking-tighter mb-8 uppercase leading-none">
-            Design a Life <br> around Less.
+    <header class="max-w-6xl mx-auto px-6 py-32 text-center fade-in">
+        <h1 class="serif italic text-6xl md:text-9xl font-light leading-[0.85] mb-12">
+            The Art of <br> Essential Living.
         </h1>
-        <p class="max-w-3xl mx-auto text-xl leading-relaxed text-gray-600 mb-10">
-            Studio Tini finds the powerful value hidden in the tiniest things. Minimal stuff isn’t less life — it’s more clarity, more time, more freedom. I help homeowners, renters, and Airbnb hosts create homes that breathe, systems that sustain, and lives where you control your attention in an economy of distraction.
+        <p class="max-w-xl mx-auto text-base text-gray-500 leading-relaxed mb-12 tracking-wide font-light">
+            Strategic spatial curation for high-functioning homes and micro-living assets. We transform chaos into logic, returning your focus to what truly matters.
         </p>
-        <a href="https://calendly.com/studiotinidesigns" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#54584e] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition shadow-lg">Book a Consultation</a>
+        <a href="#contact" class="inline-block border border-[#54584e] text-[#54584e] px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-[#54584e] hover:text-white transition-all duration-500">
+            Request a Consultation
+        </a>
     </header>
 
-    <section id="about" class="max-w-5xl mx-auto px-6 py-24 border-t border-gray-200">
-        <div class="grid md:grid-cols-2 gap-16 items-start">
-            <div>
-                <img src="images/tini-portrait.jpeg" alt="Christina Ni" class="w-full h-auto object-cover rounded-sm shadow-sm">
-            </div>
-            <div class="space-y-6 text-gray-700">
-                <h2 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">Studio Story</h2>
-                <p class="text-lg leading-relaxed font-semibold italic text-slate-900">
-                    I’m Christina Ni. I started Studio Tini to turn chaos into clarity through strategic spatial logic.
-                </p>
-                <p class="text-lg leading-relaxed">
-                    Growing up American-born Chinese taught me resourcefulness: making the most of what we already have. Traveling to 19 countries proved that living light is not just possible—it’s empowering—it's a pathway to profound freedom.
-                </p>
-                <p class="text-lg leading-relaxed italic border-l-2 border-amber-200 pl-4">
-                    I approach organization as a mindful, joyful reset, helping you reclaim precious mental equity within your personal sanctuary.
-                </p>
-                
-                <div class="pt-6 border-t border-gray-100">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">I work with //</h3>
-                    <ul class="text-sm font-semibold space-y-2 uppercase tracking-wide text-slate-900">
-                        <li>— New Homeowners</li>
-                        <li>— Busy Professionals</li>
-                        <li>— Airbnb Operational Hosts</li>
-                        <li>— Individuals in Transition</li>
-                    </ul>
+    <section id="work" class="bg-[#F2F1ED] py-24 border-y border-[#E5E5E1]">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row items-center gap-20">
+                <div class="md:w-1/2 space-y-8">
+                    <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400">Featured Transformation</span>
+                    <h2 class="serif italic text-5xl md:text-6xl leading-tight">The Palisade <br> Micro-Loft</h2>
+                    <p class="text-gray-600 leading-relaxed font-light italic">
+                        "A comprehensive 300 sq. ft. curation. From a restrictive footprint to a high-functioning sanctuary, every element was sourced to honor the logic of 'less but better'."
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 border-t border-[#E5E5E1] pt-8">
+                        <div>
+                            <h4 class="text-[10px] font-bold uppercase tracking-widest mb-2">Scope</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Full Sourcing + Staging</p>
+                        </div>
+                        <div>
+                            <h4 class="text-[10px] font-bold uppercase tracking-widest mb-2">Logic</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Vertical Utility</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-gray-200 aspect-[3/4] w-full flex items-center justify-center text-[10px] uppercase tracking-widest text-gray-400 border border-white">Palisade Before</div>
+                    <div class="bg-gray-300 aspect-[3/4] w-full mt-12 flex items-center justify-center text-[10px] uppercase tracking-widest text-gray-400 shadow-2xl border border-white">Palisade After</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-200">
-        <h2 class="text-center text-xs uppercase tracking-widest font-bold mb-16">Services & Investment</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+    <section id="services" class="max-w-7xl mx-auto px-6 py-32">
+        <h2 class="text-center text-[10px] uppercase tracking-[0.5em] font-bold text-gray-400 mb-20">Investment & Tiers</h2>
+        <div class="grid md:grid-cols-3 gap-px bg-[#E5E5E1] border border-[#E5E5E1]">
             
-            <div class="bg-white p-10 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+            <div class="bg-[#FAF9F6] p-16 flex flex-col justify-between hover:bg-white transition duration-500">
                 <div>
-                    <h3 class="text-sm uppercase font-bold mb-4 tracking-widest">Starter Reset</h3>
-                    <div class="text-4xl font-light mb-2">$249</div>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold">Focus: One Single Zone</p>
-                    <ul class="text-sm space-y-3 text-gray-500 mb-10">
-                        <li>— 3-Hour intensive session</li>
-                        <li>— Declutter + Organize</li>
-                        <li>— Tactical storage strategy</li>
-                        <li>— Product recommendations</li>
-                        <li>— Donation haul-away included</li>
-                    </ul>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400">01 // Logic</span>
+                    <h3 class="serif text-3xl mt-8 mb-6">The Spatial Audit</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-10">An intensive blueprinting session. We identify friction points and create a strategic roadmap for your home’s flow.</p>
                 </div>
-                <a href="https://calendly.com/studiotinidesigns" target="_blank" class="text-center text-[10px] font-bold uppercase tracking-widest border border-black py-3 hover:bg-[#54584e] hover:text-white transition">Start Now</a>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase pt-6 border-t border-[#E5E5E1]">From $300</p>
             </div>
-            
-            <div class="bg-[#54584e] text-white p-10 flex flex-col justify-between shadow-2xl scale-105 relative">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-200 text-black px-4 py-1 text-[9px] font-bold uppercase tracking-widest">Most Popular</div>
+
+            <div class="bg-[#FAF9F6] p-16 flex flex-col justify-between hover:bg-white transition duration-500">
                 <div>
-                    <h3 class="text-sm uppercase font-bold mb-4 tracking-widest text-yellow-100">Home Refresh</h3>
-                    <div class="text-4xl font-light mb-2">$549</div>
-                    <p class="text-[10px] uppercase tracking-widest text-yellow-100/60 mb-6 font-bold">Focus: Multi-Room Logic</p>
-                    <ul class="text-sm space-y-3 text-yellow-100 mb-10">
-                        <li>— 6 Hours / 2-3 Target Zones</li>
-                        <li>— Labeling + Sustainable Systems</li>
-                        <li>— Reclaim your daily flow</li>
-                        <li>— Ethical donation logistics</li>
-                        <li>— Zero-waste inventory audit</li>
-                    </ul>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-[#54584e]">02 // Turnkey</span>
+                    <h3 class="serif text-3xl mt-8 mb-6 italic">The Curated Sanctuary</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-10">Comprehensive sourcing and styling. We manage the logistics and aesthetics to deliver a ready-to-live sanctuary.</p>
                 </div>
-                <a href="https://calendly.com/studiotinidesigns" target="_blank" class="text-center text-[10px] font-bold uppercase tracking-widest bg-white text-[#54584e] py-3 hover:bg-zinc-200 transition">Book Refresh</a>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase pt-6 border-t border-[#E5E5E1]">From $1,500</p>
             </div>
-            
-            <div class="bg-white p-10 border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+
+            <div class="bg-[#FAF9F6] p-16 flex flex-col justify-between hover:bg-white transition duration-500">
                 <div>
-                    <h3 class="text-sm uppercase font-bold mb-4 tracking-widest">Full Day</h3>
-                    <div class="text-4xl font-light mb-2">$1,100</div>
-                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-6 font-bold">Focus: Total Home Reset</p>
-                    <ul class="text-sm space-y-3 text-gray-500 mb-10">
-                        <li>— 12 Hour transformation</li>
-                        <li>— Premium aesthetic staging</li>
-                        <li>— Full sustainment blueprint</li>
-                        <li>— Multi-zone spatial overhaul</li>
-                        <li>— 30-day logic check-in</li>
-                    </ul>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-gray-400">03 // Commercial</span>
+                    <h3 class="serif text-3xl mt-8 mb-6">Asset Staging</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-10">Strategic design for Airbnb hosts and commercial spaces to maximize guest experience and spatial ROI.</p>
                 </div>
-                <a href="https://calendly.com/studiotinidesigns" target="_blank" class="text-center text-[10px] font-bold uppercase tracking-widest border border-black py-3 hover:bg-[#54584e] hover:text-white transition">Inquire</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-5xl mx-auto px-6 py-24 border-t border-gray-200">
-        <h2 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-16 text-center">Results in Practice</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-            
-            <div class="space-y-4">
-                <p class="serif text-xl italic leading-relaxed text-slate-700">
-                    "I’ve brought Christina back 4x to tackle new zones as my life evolves. She’s turned every room into a sanctuary. We built logic for how we actually live."
-                </p>
-                <div class="flex flex-col">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-900">— T. Denver</span>
-                    <span class="text-[9px] text-gray-400 uppercase tracking-widest">Multi-Phase Home Setup client</span>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <p class="serif text-xl italic leading-relaxed text-slate-700">
-                    "Christina managed my transition from a full-time rental to a Sprinter van life. She audited my storage unit and optimized my mobile climb-rig so every inch has a purpose. Living on the road as a climber requires extreme logic, and she delivered."
-                </p>
-                <div class="flex flex-col">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-900">— K. Boulder</span>
-                    <span class="text-[9px] text-gray-400 uppercase tracking-widest">Sprinter Van Transition</span>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <p class="serif text-xl italic leading-relaxed text-slate-700">
-                    "Christina color-coded my closet and built systems using what I already had. I saved so much money because she proves you don't need a Container Store to gain clarity."
-                </p>
-                <div class="flex flex-col">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-900">— M. Santa Cruz</span>
-                    <span class="text-[9px] text-gray-400 uppercase tracking-widest">Inventory Logic // Zero-Waste</span>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <p class="serif text-xl italic leading-relaxed text-slate-700">
-                    "Christina created a system for my 12-year-old that actually stuck. She taught him the logic of where things go, and for the first time, his room is maintainable."
-                </p>
-                <div class="flex flex-col">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-900">— A. Santa Cruz</span>
-                    <span class="text-[9px] text-gray-400 uppercase tracking-widest">Developmental Logic for Kids</span>
-                </div>
-            </div>
-
-            <div class="md:col-span-2 space-y-4 pt-10 border-t border-gray-100 text-center">
-                <p class="serif text-2xl italic leading-relaxed text-slate-700 max-w-3xl mx-auto">
-                    "Christina creates systems that breathe. It’s been six months and the pantry is still perfect because the logic behind it is sustainable. Studio Tini is essential."
-                </p>
-                <div class="flex flex-col text-center">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-900">— S. Denver</span>
-                    <span class="text-[9px] text-gray-400 uppercase tracking-widest">Sustainment Review</span>
-                </div>
+                <p class="text-xs font-bold tracking-[0.2em] uppercase pt-6 border-t border-[#E5E5E1]">Inquire for Quote</p>
             </div>
 
         </div>
     </section>
 
-    <section id="archive" class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-200">
-        <h2 class="text-xs uppercase tracking-widest font-bold mb-12 text-gray-400">The Archive // Case Studies in Logic</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-1.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Denver Airbnb">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 1: Living room airbnb — Denver</p>
-            </div>
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-2.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Bedroom Restage">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 2: Bedroom Restage — Denver</p>
-            </div>
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-3.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Toiletries Denver">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 3: Decluttering toiletries — Denver</p>
-            </div>
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-4.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Van Life Boulder">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 4: Van Life transition — Boulder</p>
-            </div>
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-5.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Santa Cruz Closet">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 5: Closet logic — Santa Cruz</p>
-            </div>
-            <div class="border-t border-gray-100 pt-4">
-                <img src="images/archive-6.jpg" class="aspect-square w-full object-cover mb-4 shadow-sm" alt="Denver Minimalist">
-                <p class="text-[10px] font-bold uppercase tracking-widest">Organized Space 6: Minimalist Flow — Denver</p>
-            </div>
+    <section id="about" class="bg-[#54584e] text-[#F2F1ED] py-32 px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-60 mb-8 block">Our Philosophy</span>
+            <h2 class="serif italic text-4xl md:text-6xl mb-12 leading-snug">
+                "Living light is a pathway <br> to profound freedom."
+            </h2>
+            <p class="text-lg font-light opacity-80 leading-relaxed max-w-2xl mx-auto">
+                I’m Christina Ni. I started Studio Tini to help you reclaim mental equity. Growing up American-born Chinese and traveling to 19 countries taught me that we don't need more; we need better logic.
+            </p>
         </div>
     </section>
 
-    <footer class="py-24 border-t border-gray-200 text-center">
-        <h2 class="text-3xl font-light mb-8 italic">Ready to reset your logic?</h2>
-        
-        <a href="https://calendly.com/studiotinidesigns" target="_blank" rel="noopener noreferrer" 
-           class="inline-block bg-[#54584e] text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition shadow-lg mb-4">
-            BOOK WITH ME: CLICK ON THIS LINK
+    <footer id="contact" class="py-32 text-center">
+        <h2 class="serif italic text-4xl mb-12">Start the conversation.</h2>
+        <a href="https://calendly.com/studiotinidesigns" target="_blank" class="inline-block bg-[#1A1A1A] text-white px-16 py-6 text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-[#54584e] transition-all duration-700 shadow-2xl mb-12">
+            Inquire for Availability
         </a>
         
-        <div class="mt-4 flex flex-wrap justify-center gap-4">
-            <a href="mailto:studiotinidesigns@gmail.com" 
-               class="inline-block bg-[#54584e] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition">
-                Email: studiotinidesigns@gmail.com
-            </a>
-            <a href="tel:2018870164" 
-               class="inline-block bg-[#54584e] text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition">
-                Cell: 201-887-0164
-            </a>
+        <div class="flex flex-col space-y-4 text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-12">
+            <a href="mailto:studiotinidesigns@gmail.com" class="hover:text-[#1A1A1A] transition">m. studiotinidesigns@gmail.com</a>
+            <a href="tel:2018870164" class="hover:text-[#1A1A1A] transition">t. +1 201 887 0164</a>
         </div>
-        
-        <div class="mt-20 text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em]">
-            @tinitakestidying // © 2025 Studio Tini
+
+        <div class="mt-32 text-[8px] text-gray-300 font-bold uppercase tracking-[0.5em]">
+            @tinitakestidying // © 2026 Studio Tini
         </div>
     </footer>
 
