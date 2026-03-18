@@ -12,29 +12,28 @@
         @keyframes fade-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .img-container { overflow: hidden; background-color: #f3f3f3; }
         .img-zoom { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .img-zoom:hover { transform: scale(1.05); }
-        .kerning-upscale { letter-spacing: 0.5em; }
+        .img-zoom:hover { transform: scale(1.05); filter: grayscale(0); }
     </style>
 </head>
 <body class="selection:bg-stone-200">
 
     <nav class="sticky top-0 z-50 bg-[#FAF9F6]/90 backdrop-blur-md border-b border-stone-100">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-10 py-8 flex justify-between items-center">
             <div class="text-xl font-light tracking-[0.6em] uppercase text-stone-800">Studio Tini</div>
-            <div class="hidden md:flex space-x-10 text-[9px] uppercase tracking-[0.3em] font-bold text-stone-400">
-                <a href="#about" class="hover:text-stone-900 transition-colors">Practice</a>
-                <a href="#case-study" class="hover:text-stone-900 transition-colors">Palisade</a>
-                <a href="#archive" class="hover:text-stone-900 transition-colors">Archive</a>
+            <div class="hidden md:flex space-x-12 text-[9px] uppercase tracking-[0.3em] font-bold text-stone-400">
+                <a href="#about" class="hover:text-stone-800 transition-colors">Practice</a>
+                <a href="#case-study" class="hover:text-stone-800 transition-colors">Palisade</a>
+                <a href="#archive" class="hover:text-stone-800 transition-colors">Archive</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="max-w-6xl mx-auto px-8 py-32 md:py-48 reveal">
-        <div class="grid md:grid-cols-2 gap-20 items-center">
-            <div class="space-y-10">
+    <section id="about" class="max-w-6xl mx-auto px-10 py-40 reveal">
+        <div class="grid md:grid-cols-2 gap-24 items-center">
+            <div class="space-y-12">
                 <div class="space-y-3">
                     <h2 class="text-[10px] uppercase tracking-[0.6em] text-stone-300 font-bold italic">The Practice // Christina Ni</h2>
-                    <p class="text-[11px] uppercase tracking-[0.4em] text-stone-500 font-semibold">Professional Organizer & Staging Expert</p>
+                    <p class="text-[11px] uppercase tracking-[0.4em] text-stone-500 font-semibold italic">Professional Organizer & Staging Expert</p>
                 </div>
                 
                 <h1 class="text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tighter text-stone-800">
@@ -43,121 +42,92 @@
 
                 <div class="space-y-6 text-base font-light leading-relaxed text-stone-500 max-w-lg">
                     <p>
-                        We focus on the essential alchemy of small-footprint living. By merging professional staging with a disciplined approach to organization, we ensure every property doesn't just look ready for market—it feels fundamentally functional.
-                    </p>
-                    <p>
-                        Based between Denver and Palisade, Studio Tini provides contract staging for residential properties, prioritizing tactile quality and spatial logic.
+                        We focus on the essential alchemy of small-footprint living. By merging professional staging with a disciplined approach to organization, we ensure every property feels fundamentally functional.
                     </p>
                 </div>
-
-                <div class="pt-6">
-                    <a href="mailto:studiotinidesigns@gmail.com" class="text-[10px] uppercase tracking-[0.3em] font-bold pb-2 border-b border-stone-800 hover:text-stone-400 hover:border-stone-400 transition-all">
+                
+                <div class="pt-8">
+                    <a href="mailto:studiotinidesigns@gmail.com" class="text-[10px] uppercase tracking-[0.4em] font-bold pb-2 border-b border-stone-800 hover:text-stone-400 transition-all">
                         Inquire for Staging & Organizing
                     </a>
                 </div>
             </div>
             
             <div class="relative">
-                <div class="img-container shadow-2xl">
-                    <img src="images/tini-portrait.jpeg" alt="Christina Ni | Professional Organizer & Staging Expert" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                </div>
-                <div class="absolute -bottom-6 -left-6 w-32 h-32 border-l border-b border-stone-200 -z-10"></div>
+                <img src="images/tini-portrait.jpeg" class="w-full grayscale shadow-2xl transition duration-1000 hover:grayscale-0">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r border-b border-stone-200"></div>
             </div>
         </div>
     </section>
 
     <section id="case-study" class="bg-white border-y border-stone-100 py-32">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="mb-24 max-w-2xl">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="mb-32 max-w-2xl">
                 <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-6 font-bold">Case Study // 01</h2>
-                <h3 class="text-5xl font-extralight tracking-tighter mb-8 text-stone-800 uppercase">The Palisade Studio</h3>
+                <h3 class="text-5xl font-extralight tracking-tighter mb-8 text-stone-800">The Palisade Studio</h3>
                 <p class="text-stone-500 font-light leading-relaxed text-lg italic">
-                    A transformation focused on intentional layering and resourcefulness in a 300sqft residential footprint.
+                    Residential staging in a 300sqft footprint.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-20">
                 <div class="space-y-3"><img src="images/palisade-before-1.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-1.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
-                
                 <div class="space-y-3"><img src="images/palisade-before-2.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-2.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
-                
                 <div class="space-y-3"><img src="images/palisade-before-3.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-3.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
-                
                 <div class="space-y-3"><img src="images/palisade-before-4.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-4.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
-                
                 <div class="space-y-3"><img src="images/palisade-before-5.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-5.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
-                
                 <div class="space-y-3"><img src="images/palisade-before-6.jpg" class="aspect-[3/4] object-cover w-full opacity-30 grayscale"><p class="text-[7px] uppercase tracking-widest text-stone-300">Before</p></div>
                 <div class="space-y-3"><img src="images/palisade-after-6.jpg" class="aspect-[3/4] object-cover w-full shadow-lg img-zoom"><p class="text-[7px] font-bold uppercase tracking-widest text-stone-500">After</p></div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-8 py-40">
-        <div class="grid md:grid-cols-3 gap-24 items-start">
+    <section class="max-w-7xl mx-auto px-10 py-40">
+        <div class="grid md:grid-cols-3 gap-24">
             <div class="md:col-span-1 sticky top-32">
-                <h4 class="text-[10px] uppercase tracking-[0.5em] font-bold text-stone-300 mb-8 italic underline underline-offset-8">Sensory Logic</h4>
-                <div class="space-y-8 text-base font-light leading-relaxed text-stone-600">
-                    <p>In a 300sqft footprint, every object carries weight. We prioritize <strong>Tactile Quality</strong>—choosing brands that signal comfort and care.</p>
-                    <p>From the weight of <strong>Brooklinen</strong> textures to the sensory grounding of <strong>Aesop</strong> botanicals, these "small touches" are the anchors that make a studio feel like a sanctuary.</p>
-                </div>
+                <h4 class="text-[10px] uppercase tracking-[0.5em] font-bold text-stone-300 mb-8 italic">Sensory Logic</h4>
+                <p class="text-base font-light leading-relaxed text-stone-600">From the weight of <strong>Brooklinen</strong> textures to the sensory grounding of <strong>Aesop</strong> botanicals.</p>
             </div>
-
-            <div class="md:col-span-2 grid grid-cols-2 gap-x-8 gap-y-16">
-                <div class="space-y-4">
-                    <img src="images/palisade-detail-1.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                    <p class="text-[8px] uppercase tracking-widest text-stone-400 font-bold italic">01 // Aesop Luxury Hand Soap</p>
-                </div>
-                <div class="space-y-4">
-                    <img src="images/palisade-detail-2.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                    <p class="text-[8px] uppercase tracking-widest text-stone-400 font-bold italic">02 // Curated wine service for luxury stays</p>
-                </div>
-                <div class="space-y-4">
-                    <img src="images/palisade-detail-3.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                    <p class="text-[8px] uppercase tracking-widest text-stone-400 font-bold italic">03 // Unique profile stainless steel flatware</p>
-                </div>
-                <div class="space-y-4">
-                    <img src="images/palisade-detail-4.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                    <p class="text-[8px] uppercase tracking-widest text-stone-400 font-bold italic">04 // Modern matte handmade ceramics</p>
-                </div>
-                <div class="space-y-4">
-                    <img src="images/palisade-detail-5.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000">
-                    <p class="text-[8px] uppercase tracking-widest text-stone-400 font-bold italic">05 // Brooklinen waffle-weave bath collection</p>
-                </div>
+            <div class="md:col-span-2 grid grid-cols-2 gap-10">
+                <img src="images/palisade-detail-1.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-sm">
+                <img src="images/palisade-detail-2.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-sm">
+                <img src="images/palisade-detail-3.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-sm">
+                <img src="images/palisade-detail-4.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-sm">
+                <img src="images/palisade-detail-5.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700 shadow-sm">
             </div>
         </div>
     </section>
 
-    <section id="archive" class="max-w-7xl mx-auto px-8 py-40 border-t border-stone-100">
+    <section id="archive" class="max-w-7xl mx-auto px-10 py-40 border-t border-stone-100">
         <h2 class="text-[10px] uppercase tracking-[0.5em] font-bold mb-20 text-stone-300 text-center">Historical Archive</h2>
         <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-1.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-1.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Denver Airbnb</p>
             </div>
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-2.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-2.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Bedroom Restage</p>
             </div>
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-3.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-3.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Decluttering</p>
             </div>
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-4.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-4.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Van Life</p>
             </div>
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-5.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-5.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Closet Logic</p>
             </div>
             <div class="space-y-3 opacity-40 hover:opacity-100 transition duration-700">
-                <img src="images/archive-6.jpg" class="aspect-square object-cover shadow-sm">
+                <img src="images/archive-6.jpg" class="aspect-square object-cover">
                 <p class="text-[7px] uppercase tracking-widest text-center">Minimalist Flow</p>
             </div>
         </div>
@@ -167,7 +137,7 @@
         <div class="text-[9px] font-bold uppercase tracking-[0.4em] text-stone-300 space-y-4">
             <p class="text-stone-800">studiotinidesigns@gmail.com</p>
             <p>201-887-0164</p>
-            <p class="text-stone-200">Denver // Palisade</p>
+            <p class="text-stone-200 uppercase">Denver // Palisade</p>
         </div>
     </footer>
 
