@@ -10,6 +10,8 @@
         body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; background-color: #FAF9F6; color: #1A1A1A; overflow-x: hidden; }
         .gallery-img { filter: grayscale(100%); transition: all 0.6s ease; cursor: pointer; }
         .gallery-img:hover { filter: grayscale(0%); transform: scale(1.02); }
+        .fade-up { animation: fade-in 1s ease-out forwards; }
+        @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="selection:bg-stone-200">
@@ -25,83 +27,49 @@
         </div>
     </nav>
 
-    <section class="max-w-6xl mx-auto px-8 py-24">
-        <p class="text-[10px] uppercase tracking-[0.4em] text-stone-400 font-bold mb-6">Colorado’s Most Efficient Spatial Service</p>
-        <h1 class="text-5xl md:text-7xl font-extralight tracking-tighter text-stone-900 leading-[1.1]">
-            Systems for the <span class="italic font-normal text-stone-600">busy professional</span> who values clarity.
-        </h1>
-        <p class="mt-10 text-lg text-stone-500 max-w-lg leading-relaxed">We transform chaotic homes into high-functioning, maintenance-free zones. Reclaim your time, your space, and your mental bandwidth.</p>
+    <section class="max-w-7xl mx-auto px-8 py-24 md:py-32 fade-up">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-10 order-2 md:order-1">
+                <p class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">Colorado’s Most Efficient Spatial Service</p>
+                <h1 class="text-5xl md:text-7xl font-extralight leading-[1.05] tracking-tighter text-stone-900">
+                    Spatial systems for the <span class="italic font-normal text-stone-600">busy professional</span> who requires a home that works as hard as they do.
+                </h1>
+                <p class="mt-10 text-lg text-stone-500 max-w-lg leading-relaxed">We transform chaotic homes into high-functioning, maintenance-free zones. Reclaim your time, your space, and your mental bandwidth.</p>
+                <a href="#contact" class="inline-block bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-5 hover:bg-stone-700 transition-all shadow-lg">Secure Your Date</a>
+            </div>
+            <div class="order-1 md:order-2">
+                <img src="images/tini-portrait.jpeg" alt="Tini Portrait" class="w-full shadow-2xl rounded-sm max-w-md mx-auto md:max-w-full">
+            </div>
+        </div>
     </section>
 
     <section id="portfolio" class="bg-white border-y border-stone-100 py-32">
         <div class="max-w-7xl mx-auto px-8">
-            <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-16 font-bold text-center">Visual Portfolio</h2>
+            <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-20 font-bold text-center">Selected Projects</h2>
+
+            <h3 class="text-xs uppercase tracking-[0.3em] text-stone-500 font-bold mb-10 border-l border-stone-900 pl-4">The Palisade Case Study</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
+                <div class="flex flex-col gap-2"><img src="images/palisade-before-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-400 font-bold">Baseline</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-after-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Transformed</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-before-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-400 font-bold">Baseline</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-after-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Transformed</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-before-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-400 font-bold">Baseline</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-after-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Transformed</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-detail-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Spatial Detail</span></div>
+                <div class="flex flex-col gap-2"><img src="images/palisade-detail-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Spatial Detail</span></div>
+            </div>
+
+            <h3 class="text-xs uppercase tracking-[0.3em] text-stone-500 font-bold mb-10 border-l border-stone-900 pl-4">Spatial Archive</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <img src="images/palisade-before-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-after-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-before-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-after-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-before-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-after-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-detail-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/palisade-detail-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-4.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-5.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
-                <img src="images/archive-6.jpg" class="gallery-img aspect-[3/4] object-cover w-full">
+                <div class="flex flex-col gap-2"><img src="images/archive-1.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Room Design: Living</span></div>
+                <div class="flex flex-col gap-2"><img src="images/archive-2.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Bedroom Reset</span></div>
+                <div class="flex flex-col gap-2"><img src="images/archive-3.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Operational Process</span></div>
+                <div class="flex flex-col gap-2"><img src="images/archive-4.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Van Life/Small Space</span></div>
+                <div class="flex flex-col gap-2"><img src="images/archive-5.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Closet & Color Coor.</span></div>
+                <div class="flex flex-col gap-2"><img src="images/archive-6.jpg" class="gallery-img aspect-[3/4] object-cover w-full"><span class="text-[8px] uppercase tracking-widest text-stone-900 font-bold">Bedroom/Living Integration</span></div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="max-w-7xl mx-auto px-8 py-32">
-        <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 mb-16 font-bold text-center">Investment Architecture</h2>
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="border p-8"><h4 class="text-[10px] uppercase font-bold text-stone-400 mb-6">The Audit</h4><p class="text-2xl mb-4">$75/hr</p><p class="text-xs text-stone-500">Virtual strategic spatial analysis. Includes master plan and inventory recommendations. +20% procurement management fee.</p></div>
-            <div class="border p-8"><h4 class="text-[10px] uppercase font-bold text-stone-400 mb-6">The Precision</h4><p class="text-2xl mb-4">$249</p><p class="text-xs text-stone-500">Targeted intervention for one high-friction zone. Rigorous, sustainable system design. +20% procurement management fee.</p></div>
-            <div class="relative border-2 border-stone-900 p-8 bg-stone-900 text-white scale-105 shadow-2xl">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-stone-900 text-[8px] uppercase px-4 py-1 border font-bold">Most Popular</div>
-                <h4 class="text-[10px] uppercase font-bold text-stone-500 mb-6">The Residence</h4><p class="text-2xl mb-4">$549</p><p class="text-xs text-stone-400 mb-4">Holistic spatial stewardship. Multi-room architectural transformation. +20% procurement management fee.</p>
-                <p class="text-[9px] text-orange-200 font-bold uppercase tracking-widest mt-4">Only 2 spots remaining for May</p>
-            </div>
-            <div class="border p-8"><h4 class="text-[10px] uppercase font-bold text-stone-400 mb-6">The Estate</h4><p class="text-2xl mb-4">Bespoke</p><p class="text-xs text-stone-500">Turnkey estate orchestration. Complete logistical management of furnishings and systems. +20% procurement management fee.</p></div>
-        </div>
-    </section>
-
-    <section class="py-32 bg-stone-50">
-        <div class="max-w-3xl mx-auto px-8 space-y-16">
-            <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold text-center">Client Experiences</h2>
-            <div class="grid gap-10 text-center text-stone-700 italic">
-                <p>"Christina helped me optimize my van life setup in Boulder. It’s compact, efficient, and actually feels like home." — K., BOULDER, CO</p>
-                <p>"Our Airbnb listing in Boulder is performing significantly better thanks to the spatial design and guest-focused flow." — M. & J., BOULDER, CO</p>
-                <p>"The inventory management system for our complex collection in Santa Cruz is perfectly logical and incredibly sustainable." — L.S., SANTA CRUZ, CA</p>
-                <p>"Six months later, and the system in my Denver home is still pristine. It’s truly maintenance-free." — S.R., DENVER, CO</p>
-                <p>"The organizing logic applied to my son's room in Santa Cruz gave him ownership over his space. It's a game-changer." — T.K., SANTA CRUZ, CA</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="max-w-3xl mx-auto px-8 py-32">
-        <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-10 text-center font-bold">Request Appointment</h2>
-        <form action="https://formspree.io/f/xdayklan" method="POST" class="grid gap-8">
-            <div class="grid md:grid-cols-2 gap-8">
-                <input type="text" name="name" placeholder="Full Name" required class="border-b bg-transparent p-4 outline-none">
-                <input type="email" name="_replyto" placeholder="Email" required class="border-b bg-transparent p-4 outline-none">
-            </div>
-            <select name="headache" class="w-full border-b bg-transparent p-4 outline-none text-stone-500">
-                <option value="" disabled selected>Primary Spatial Headache</option>
-                <option value="kitchen_pantry">Kitchen & Pantry</option>
-                <option value="closet_wardrobe">Primary Closet & Wardrobe</option>
-                <option value="home_office">Home Office & Productivity</option>
-                <option value="garage_mudroom">Garage & Entryway Systems</option>
-                <option value="whole_home">Whole-Home Strategy & Reset</option>
-                <option value="other">Other / Custom Project</option>
-            </select>
-            <input type="number" name="square_footage" placeholder="Estimated Square Footage" class="w-full border-b bg-transparent p-4 outline-none">
-            <textarea name="message" placeholder="Brief project goals..." rows="4" class="w-full border-b bg-transparent p-4 outline-none"></textarea>
-            <button type="submit" class="bg-stone-900 text-white p-6 uppercase text-[10px] font-bold hover:bg-stone-700 transition-all">Submit Inquiry</button>
-        </form>
-    </section>
-</body>
+    </body>
 </html>
