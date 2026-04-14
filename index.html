@@ -3,72 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Tini</title>
+    <title>Studio Tini | Home Organizing & Staging for Busy Professionals</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Strict container locks the site width, preventing all 'weird spacing' errors */
-        .site-container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; background-color: #FAF9F6; color: #1A1A1A; overflow-x: hidden; }
+        .reveal-color { 
+            filter: grayscale(100%); 
+            transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: crosshair;
+        }
+        .reveal-color:hover { filter: grayscale(0%); transform: scale(1.01); }
+        .fade-up { animation: fade-in 1s ease-out forwards; }
+        @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-[#FAF9F6] text-[#1A1A1A] font-sans">
+<body class="selection:bg-stone-200">
 
-    <nav class="site-container flex justify-between items-center py-8 text-[10px] uppercase tracking-[0.2em] font-bold border-b border-stone-200">
-        <div>Studio Tini</div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#services" class="hover:text-stone-600">Services</a>
-            <a href="#portfolio" class="hover:text-stone-600">Portfolio</a>
-            <a href="#pricing" class="hover:text-stone-600">Pricing</a>
-            <a href="#contact" class="bg-black text-white px-4 py-2 hover:bg-stone-800">Book 15-Min Call</a>
+    <nav class="sticky top-0 z-50 bg-[#FAF9F6]/95 backdrop-blur-md border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center text-stone-800">
+            <div class="text-xl font-light tracking-[0.6em] uppercase text-stone-900">Studio Tini</div>
+            <div class="hidden md:flex space-x-12 text-[9px] uppercase tracking-[0.4em] font-bold text-stone-400">
+                <a href="#services" class="hover:text-stone-800 transition-colors">Services</a>
+                <a href="#results" class="hover:text-stone-800 transition-colors">Portfolio</a>
+                <a href="#pricing" class="hover:text-stone-800 transition-colors">Pricing</a>
+                <a href="#inquiry" class="text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-500 hover:border-stone-500 transition-all">Book 15-Min Call</a>
+            </div>
         </div>
-        <div class="md:hidden text-xs">Menu</div>
     </nav>
 
-    <main class="site-container">
-        
-        <header class="grid md:grid-cols-2 gap-12 items-center mb-24 py-16">
-            <div class="space-y-6">
-                <h1 class="text-xs uppercase tracking-[0.4em] text-stone-500">Studio Tini // Christina Ni</h1>
-                <p class="text-4xl md:text-5xl font-light leading-tight">Home organizing for busy professionals who want a home that actually works.</p>
-                <p class="text-lg text-stone-700 leading-relaxed">We design simple, sustainable systems that reduce clutter, save time, and restore spatial flow—ensuring your reset lasts long-term.</p>
-                <div class="pt-4 space-x-6">
-                    <a href="#contact" class="inline-block bg-black text-white px-6 py-3 uppercase tracking-widest text-xs font-bold hover:bg-stone-800">Start Your Space Reset</a>
-                    <a href="#services" class="inline-block text-xs uppercase tracking-widest font-bold border-b border-black pb-1">Explore Services</a>
+    <section class="max-w-6xl mx-auto px-8 py-24 md:py-44 fade-up">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-10">
+                <div class="space-y-2">
+                    <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">Studio Tini // Christina Ni</h2>
+                    <p class="text-[11px] uppercase tracking-[0.3em] text-stone-600 font-bold">Full-Service Home Organizing & Staging</p>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extralight leading-[1.05] tracking-tighter text-stone-900">
+                    Home organizing for <span class="italic font-normal text-stone-600">busy people</span> who want a home that actually works.
+                </h1>
+                <div class="space-y-6 text-lg font-light leading-relaxed text-stone-500 max-w-md">
+                    <p>We design simple systems for busy professionals and new homeowners that reduce clutter, save time, and keep your space organized long-term.</p>
+                </div>
+                <div class="pt-2 space-y-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <a href="#inquiry" class="bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-5 hover:bg-stone-700 transition-all shadow-lg">Start Your Space Reset</a>
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-stone-400 font-bold italic">Limited monthly client spots to ensure a high-touch experience.</p>
                 </div>
             </div>
-            <div class="md:justify-self-end">
-                <img src="images/tini-portrait.jpeg" class="w-full max-w-sm aspect-[4/5] object-cover grayscale shadow-2xl" alt="Christina Ni Portrait">
+            <div class="relative">
+                <img src="images/tini-portrait.jpeg" onerror="this.src='tini-portrait.jpeg'" class="w-full shadow-2xl reveal-color rounded-sm">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r border-b border-stone-200 -z-10"></div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <section id="pricing" class="mb-24 py-16 border-t border-stone-200">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-stone-500 mb-12 border-l border-black pl-4">Spatial Investment Tiers</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 border border-stone-200 space-y-4">
-                    <h3 class="font-bold uppercase tracking-widest text-sm">The Precision ($249)</h3>
-                    <p class="text-sm text-stone-600">Targeted intervention for one high-friction zone. Rigorous system design for immediate impact.</p>
-                </div>
-                
-                <div class="bg-white p-8 border-2 border-black space-y-4 shadow-xl relative md:-mt-4">
-                    <div class="absolute -top-3 left-6 bg-black text-white text-[10px] uppercase font-bold px-3 py-1 tracking-widest">Most Popular</div>
-                    <h3 class="font-bold uppercase tracking-widest text-sm mt-4">The Residence ($549)</h3>
-                    <p class="text-sm text-stone-800">Holistic multi-room stewardship. Complete architectural transformation and spatial flow synchronization.</p>
-                </div>
-
-                <div class="bg-white p-8 border border-stone-200 space-y-4">
-                    <h3 class="font-bold uppercase tracking-widest text-sm">The Estate (Bespoke)</h3>
-                    <p class="text-sm text-stone-600">Turnkey estate orchestration. End-to-end logistical management for high-performance properties.</p>
-                </div>
+    <section id="pricing" class="max-w-7xl mx-auto px-8 py-32 border-t border-stone-100 bg-stone-50/30">
+        <div class="mb-20"><h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-4 font-bold">Investment Tiers</h2><h3 class="text-5xl font-extralight tracking-tighter text-stone-900 uppercase">Packages & Resets</h3></div>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
+                <div><h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Virtual Reset</h4><p class="text-3xl font-extralight tracking-tighter mb-4">$75 <span class="text-sm">/ hr</span></p><p class="text-sm font-light text-stone-500 leading-relaxed mb-8">Professional systems. 20% sourcing fee if procurement requested.</p></div>
+                <a href="#inquiry" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start">Select</a>
             </div>
-            <p class="text-[10px] uppercase font-bold tracking-[0.2em] mt-10 text-center italic text-stone-400">* Note: A 20% procurement management fee applies to all materials sourced if requested.</p>
-        </section>
-
-        <section id="contact" class="py-16 border-t-2 border-black mb-24">
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
+                <div><h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Starter Reset</h4><p class="text-3xl font-extralight tracking-tighter mb-4">$249</p><p class="text-sm font-light text-stone-500 leading-relaxed mb-8">Fix one high-friction space. 20% sourcing fee if procurement requested.</p></div>
+                <a href="#inquiry" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start">Select</a>
+            </div>
+            <div class="border border-stone-900 p-8 bg-stone-900 text-white flex flex-col justify-between shadow-2xl scale-105">
                 <div>
-                    <h2 class="text-3xl uppercase tracking-widest mb-6">Book Your 15-Min Call</h2>
-                    <p class="text-lg text-stone-700 mb-4">Let's discuss the friction points in your home. Limited client spots available monthly to ensure a high-touch experience.</p>
-                    <p class="text-sm font-bold uppercase tracking-widest bg-stone-100 p-4 inline-block">Now Booking for April/May</p>
+                    <span class="text-[8px] uppercase tracking-widest font-bold bg-white text-stone-900 px-2 py-1 mb-4 inline-block">Most Popular</span>
+                    <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-500 mb-6">Home Refresh</h4>
+                    <p class="text-3xl font-extralight tracking-tighter mb-4">$549</p>
+                    <p class="text-sm font-light text-stone-400 leading-relaxed mb-8">Comprehensive reset of multiple home areas. 20% sourcing fee if procurement requested.</p>
                 </div>
-                
-                <form action="https
+                <a href="#inquiry" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-white pb-1 self-start">Select</a>
+            </div>
+            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
+                <div><h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Full Staging</h4><p class="text-3xl font-extralight tracking-tighter mb-4">$1,350 <span class="text-sm">+</span></p><p class="text-sm font-light text-stone-500 leading-relaxed mb-8">Turnkey furniture sourcing. 20% sourcing fee if procurement requested.</p></div>
+                <a href="#inquiry" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start">Select</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="inquiry" class="max-w-3xl mx-auto px-8 py-32">
+        <h2 class="text-4xl font-extralight tracking-tighter mb-12 uppercase">Book Your Inquiry</h2>
+        <form action="https://formspree.io/f/xdayklan" method="POST" class="space-y-8">
+            <input type="text" name="name" placeholder="Full Name" required class="w-full bg-transparent border-b border-stone-300 py-3 focus:border-stone-900 outline-none transition-colors">
+            <input type="email" name="email" placeholder="Email Address" required class="w-full bg-transparent border-b border-stone-300 py-3 focus:border-stone-900 outline-none transition-colors">
+            <select name="service" class="w-full bg-transparent border-b border-stone-300 py-3 focus:border-stone-900 outline-none">
+                <option>Select Tier</option>
+                <option>Virtual Reset ($75/hr)</option>
+                <option>Starter Reset ($249)</option>
+                <option>Home Refresh - Most Popular ($549)</option>
+                <option>Full Staging ($1,350+)</option>
+            </select>
+            <textarea name="message" placeholder="Describe friction points in your home..." rows="5" class="w-full bg-transparent border-b border-stone-300 py-3 focus:border-stone-900 outline-none"></textarea>
+            <button type="submit" class="w-full bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold py-6 hover:bg-stone-700 transition-all">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <footer class="bg-stone-900 text-white pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center border-t border-stone-800 pt-16">
+                <p class="text-[9px] uppercase tracking-[0.4em] text-stone-600">© 2026 Studio Tini. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
