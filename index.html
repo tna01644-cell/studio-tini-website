@@ -8,7 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; background-color: #FAF9F6; color: #1A1A1A; overflow-x: hidden; }
-        .reveal-color { filter: grayscale(100%); transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); cursor: crosshair; }
+        .reveal-color { 
+            filter: grayscale(100%); 
+            transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: crosshair;
+        }
         .reveal-color:hover { filter: grayscale(0%); transform: scale(1.01); }
         .fade-up { animation: fade-in 1s ease-out forwards; }
         @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -16,98 +20,65 @@
 </head>
 <body class="selection:bg-stone-200">
 
-    <div class="bg-stone-900 text-stone-300 text-[8px] uppercase tracking-[0.3em] py-2 text-center font-bold">
-        May Scheduling: 2 Strategy Slots Remaining
-    </div>
-
     <nav class="sticky top-0 z-50 bg-[#FAF9F6]/95 backdrop-blur-md border-b border-stone-100">
         <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center text-stone-800">
             <div class="text-xl font-light tracking-[0.6em] uppercase text-stone-900">Studio Tini</div>
             <div class="hidden md:flex space-x-12 text-[9px] uppercase tracking-[0.4em] font-bold text-stone-400">
-                <a href="#pricing" class="hover:text-stone-800 transition-colors">Investment</a>
-                <a href="https://calendly.com/studiotinidesigns/30min" class="text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-500 hover:border-stone-500 transition-all">Book Strategy Session</a>
+                <a href="#services" class="hover:text-stone-800 transition-colors">Services</a>
+                <a href="#results" class="hover:text-stone-800 transition-colors">Portfolio</a>
+                <a href="#pricing" class="hover:text-stone-800 transition-colors">Pricing</a>
+                <a href="https://calendly.com/studiotinidesigns/30min" class="text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-500 hover:border-stone-500 transition-all">Book 15-Min Call</a>
             </div>
         </div>
     </nav>
 
-    <section class="max-w-6xl mx-auto px-8 py-24 md:py-32 fade-up">
+    <section class="max-w-6xl mx-auto px-8 py-24 md:py-44 fade-up">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-10">
+                <div class="space-y-2">
+                    <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">Studio Tini // Christina Ni</h2>
+                    <p class="text-[11px] uppercase tracking-[0.3em] text-stone-600 font-bold">Full-Service Home Organizing & Staging</p>
+                </div>
                 <h1 class="text-5xl md:text-7xl font-extralight leading-[1.05] tracking-tighter text-stone-900">
-                    Reclaim your home. <span class="italic font-normal text-stone-600">Reclaim your time.</span>
+                    Home organizing for <span class="italic font-normal text-stone-600">busy people</span> who want a home that actually works.
                 </h1>
-                <p class="text-lg font-light text-stone-500 max-w-md">Professional spatial systems designed to remove daily friction. Stop managing clutter and start managing your life.</p>
-                
-                <div class="space-y-4">
-                    <a href="https://calendly.com/studiotinidesigns/30min" class="block w-full sm:w-auto text-center bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-6 hover:bg-stone-700 transition-all shadow-lg">
-                        Book Strategy Session
-                    </a>
-                    <p class="text-[9px] uppercase tracking-[0.2em] text-stone-400 font-bold">Architecting your space for long-term order.</p>
+                <div class="space-y-6 text-lg font-light leading-relaxed text-stone-500 max-w-md">
+                    <p>We design simple systems for busy professionals and new homeowners that reduce clutter, save time, and keep your space organized long-term.</p>
+                </div>
+                <div class="pt-2 space-y-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <a href="#contact" class="bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-5 hover:bg-stone-700 transition-all shadow-lg">Start Your Space Reset</a>
+                        <a href="https://calendly.com/studiotinidesigns/30min" class="text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-5 border border-stone-200 hover:bg-stone-50 transition-all">Schedule 15-Min Call</a>
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-stone-400 font-bold italic">Limited monthly client spots. Now booking for April.</p>
                 </div>
             </div>
-            
             <div class="relative">
                 <img src="images/tini-portrait.jpeg" onerror="this.src='tini-portrait.jpeg'" class="w-full shadow-2xl reveal-color rounded-sm">
-                <p class="text-[8px] uppercase tracking-[0.2em] text-stone-400 mt-4 text-center italic">Hover or Tap to see the transformation.</p>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r border-b border-stone-200 -z-10"></div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="max-w-7xl mx-auto px-8 py-32">
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
-                <div>
-                    <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Virtual Reset</h4>
-                    <p class="text-3xl font-extralight tracking-tighter mb-4">$75 <span class="text-sm">/ hr</span></p>
-                    <p class="text-sm font-light text-stone-500 leading-relaxed mb-8">Expert systems and curated sourcing lists tailored to your specific space. The professional roadmap for a DIY execution.</p>
-                </div>
-                <a href="https://calendly.com/studiotinidesigns/30min" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start uppercase">Book Session</a>
-            </div>
-
-            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
-                <div>
-                    <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Starter Reset</h4>
-                    <p class="text-3xl font-extralight tracking-tighter mb-4">$249</p>
-                    <p class="text-sm font-light text-stone-500 leading-relaxed mb-8">A rapid, high-impact reset for one defined area. Designed for immediate relief from high-friction zones and quick, effective order.</p>
-                </div>
-                <a href="https://calendly.com/studiotinidesigns/30min" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start uppercase">Get Started</a>
-            </div>
-
-            <div class="border-2 border-stone-900 p-8 bg-stone-900 text-white flex flex-col justify-between shadow-2xl scale-105 relative">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-stone-200 text-stone-900 text-[8px] uppercase tracking-widest font-bold py-1 px-4 rounded-full">Most Popular</div>
-                <div>
-                    <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-500 mb-6">Space Refresh</h4>
-                    <p class="text-3xl font-extralight tracking-tighter mb-4">$549</p>
-                    <p class="text-sm font-light text-stone-400 leading-relaxed mb-8">Comprehensive spatial audit and white-glove setup. We architect your workflow, source high-performance systems, and execute deep-level installations.</p>
-                </div>
-                <a href="https://calendly.com/studiotinidesigns/30min" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-white pb-1 self-start uppercase">Get Your Plan</a>
-            </div>
-
-            <div class="border border-stone-100 p-8 bg-white flex flex-col justify-between hover:shadow-xl transition-all">
-                <div>
-                    <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Full Staging</h4>
-                    <p class="text-3xl font-extralight tracking-tighter mb-4">$1,350 <span class="text-sm">+</span></p>
-                    <p class="text-sm font-light text-stone-500 leading-relaxed mb-8">Strategic design for market-ready real estate or turnkey Airbnb setups. We optimize for both buyer appeal and guest hospitality.</p>
-                </div>
-                <a href="https://calendly.com/studiotinidesigns/30min" class="text-[9px] uppercase tracking-[0.3em] font-bold border-b border-stone-900 pb-1 self-start uppercase">Get A Quote</a>
-            </div>
+    <section id="pricing" class="max-w-7xl mx-auto px-8 py-32 border-t border-stone-100 bg-stone-50/30">
+        <div class="mb-20">
+            <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-300 mb-4 font-bold">Investment Tiers</h2>
+            <h3 class="text-5xl font-extralight tracking-tighter text-stone-900 uppercase">Packages & Resets</h3>
         </div>
+        <div class="grid md:grid-cols-4 gap-8">
+            </div>
     </section>
 
     <section id="contact" class="max-w-3xl mx-auto px-8 py-32">
-        <div class="mb-12 text-center">
-            <h3 class="text-4xl font-extralight tracking-tighter text-stone-900 uppercase">Secure Your Date</h3>
-        </div>
-        <form action="https://formspree.io/f/xdayklan" method="POST" class="space-y-6">
+        <h3 class="text-4xl font-extralight tracking-tighter text-stone-900 uppercase mb-12">Secure Your Date</h3>
+        <form action="https://formspree.io/f/xdayklan" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" class="space-y-6">
             <div class="grid md:grid-cols-2 gap-6">
                 <input type="text" name="name" placeholder="Full Name" required class="w-full border border-stone-200 p-4 outline-none focus:border-stone-900">
                 <input type="email" name="_replyto" placeholder="Email Address" required class="w-full border border-stone-200 p-4 outline-none focus:border-stone-900">
             </div>
-            <button type="submit" class="w-full bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold py-6 hover:bg-stone-700 transition-all">
-                Send Inquiry
-            </button>
+            <button type="submit" class="w-full bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold py-6 hover:bg-stone-700 transition-all">Send Inquiry</button>
         </form>
     </section>
 
-</body>
+    </body>
 </html>
