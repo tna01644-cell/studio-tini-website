@@ -34,7 +34,7 @@
                 <a href="https://calendly.com/studiotinidesigns/30min" target="_blank" class="inline-block bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold px-10 py-5 hover:bg-stone-700 transition-all">Book 15-Min Call</a>
             </div>
             <div class="relative">
-                <img src="images/tini-portrait.jpeg" class="w-full shadow-2xl reveal-color rounded-sm" alt="Christina Ni">
+                <img src="tini-portrait.jpeg" class="w-full shadow-2xl reveal-color rounded-sm" alt="Christina Ni">
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r border-b border-stone-200 -z-10"></div>
             </div>
         </div>
@@ -56,10 +56,17 @@
 
     <section class="max-w-7xl mx-auto px-8 py-24 border-t border-stone-100">
         <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold mb-16 text-center">Palisade Project</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
             <img src="palisade-before-1.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
             <img src="palisade-after-1.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
             <img src="palisade-detail-1.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
+        </div>
+        
+        <h2 class="text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold mb-16 text-center">Archive Collection</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <img src="archive-1.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
+            <img src="archive-2.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
+            <img src="archive-3.jpg" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all">
         </div>
     </section>
 
@@ -68,23 +75,23 @@
             <div class="border border-stone-200 p-8 bg-white flex flex-col justify-between">
                 <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Virtual Reset</h4>
                 <p class="text-3xl font-extralight tracking-tighter mb-4">$75 <span class="text-sm">/ hr</span></p>
-                <p class="text-sm font-light text-stone-500 mb-8">A personalized roadmap to reclaim your space, guided by professional expertise. 20% sourcing fee applies to all professional procurement.</p>
+                <p class="text-sm font-light text-stone-500 mb-8">A personalized roadmap to reclaim your space. 20% sourcing fee applies to procurement.</p>
             </div>
             <div class="border border-stone-200 p-8 bg-white flex flex-col justify-between">
                 <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Starter Reset</h4>
                 <p class="text-3xl font-extralight tracking-tighter mb-4">$249</p>
-                <p class="text-sm font-light text-stone-500 mb-8">Immediate relief for your most congested space. The perfect introduction to a functioning home. 20% sourcing fee applies to all professional procurement.</p>
+                <p class="text-sm font-light text-stone-500 mb-8">Immediate relief for your most congested space. 20% sourcing fee applies to procurement.</p>
             </div>
             <div class="border border-stone-900 p-8 bg-stone-900 text-white flex flex-col justify-between shadow-2xl scale-105">
                 <span class="text-[8px] uppercase tracking-widest font-bold bg-white text-stone-900 px-2 py-1 mb-4 inline-block">Most Popular</span>
                 <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-500 mb-6">Home Refresh</h4>
                 <p class="text-3xl font-extralight tracking-tighter mb-4">$549</p>
-                <p class="text-sm font-light text-stone-400 mb-8">A comprehensive, multi-room overhaul designed for seamless daily flow. 20% sourcing fee applies to all professional procurement.</p>
+                <p class="text-sm font-light text-stone-400 mb-8">Comprehensive multi-room overhaul. 20% sourcing fee applies to procurement.</p>
             </div>
             <div class="border border-stone-200 p-8 bg-white flex flex-col justify-between">
                 <h4 class="text-[10px] uppercase tracking-[0.4em] font-bold text-stone-400 mb-6">Full Staging</h4>
                 <p class="text-3xl font-extralight tracking-tighter mb-4">$1,350 <span class="text-sm">+</span></p>
-                <p class="text-sm font-light text-stone-500 mb-8">The ultimate turnkey experience. We curate, source, and style your home to match your lifestyle. 20% sourcing fee applies to all professional procurement.</p>
+                <p class="text-sm font-light text-stone-500 mb-8">Turnkey curation and styling to match your lifestyle. 20% sourcing fee applies to procurement.</p>
             </div>
         </div>
     </section>
@@ -96,21 +103,13 @@
                 <input type="text" name="name" placeholder="Full Name" required class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
                 <input type="email" name="email" placeholder="Email" required class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <select name="space" required class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
-                    <option value="" disabled selected>What space are we resetting?</option>
-                    <option value="Kitchen">Kitchen</option>
-                    <option value="Primary Closet">Primary Closet</option>
-                    <option value="Home Office">Home Office</option>
-                    <option value="Pantry">Pantry</option>
-                    <option value="Garage">Garage</option>
-                    <option value="Whole Home">Whole Home</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" name="square_footage" placeholder="Approx. Square Footage" class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
-            </div>
-            <input type="text" name="budget" placeholder="Investment Budget Estimate" class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
-            <textarea name="comments" placeholder="Comments or friction points..." rows="5" class="w-full bg-transparent border-b border-stone-300 py-3 outline-none"></textarea>
+            <select name="space" required class="w-full bg-transparent border-b border-stone-300 py-3 outline-none">
+                <option value="" disabled selected>What space are we resetting?</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Primary Closet">Primary Closet</option>
+                <option value="Home Office">Home Office</option>
+            </select>
+            <textarea name="comments" placeholder="Comments..." rows="5" class="w-full bg-transparent border-b border-stone-300 py-3 outline-none"></textarea>
             <button type="submit" class="w-full bg-stone-900 text-white text-[10px] uppercase tracking-[0.4em] font-bold py-6 hover:bg-stone-700 transition-all">Submit Inquiry</button>
         </form>
     </section>
